@@ -8,7 +8,7 @@
 			<h4>Tell us a little bit about yourself</h4>
 		</p>
 		<p>
-			All fields are optional, but be sure to include your email address if you'd like us to contact you when your feed has been added to the Feed Registry.
+			All fields are optional, but be sure to include your email address if you'd like us to contact you when your feed has been added to the TPP Feed Registry.
 		</p>
 	</div>
 
@@ -16,11 +16,11 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="input-form-label">Name</div>
-				<div class="input-form-field">{{input type="text" value=model.user.name placeholder="e.g., Therese McMillan" autofocus=true}}</div>
+				<div class="input-form-field">{{input type="text" value=model.user.name placeholder="p.ex., Teresa Gomes" autofocus=true}}</div>
 			</div>
 			<div class="col-sm-6">
 				<div class="input-form-label">Email address</div>
-				<div class="input-form-field">{{input type="text" value=model.user.email placeholder="e.g., hello@transit.land"}}</div>
+				<div class="input-form-field">{{input type="text" value=model.user.email placeholder="p.ex., ola@tpp.pt"}}</div>
 			</div>
 		</div>
 		<div class="row">
@@ -34,7 +34,7 @@
 			</div>
 			<div class="col-sm-6">
 				<div class="input-form-label">Affiliation, if any</div>
-				<div class="input-form-field">{{input type="text" value=model.user.affiliation placeholder="e.g., Federal Transit Administration"}}</div>
+				<div class="input-form-field">{{input type="text" value=model.user.affiliation placeholder="p.ex., Transporlis"}}</div>
 			</div>
 		</div>
 	</div>
@@ -47,12 +47,12 @@
 						{{#if agreeToTerms}}
 							<div class="instruction">
 								<input type="checkbox" {{action 'agree'}} checked value="">
-								By submitting feed, I agree to Transitland's <a href="https://transit.land/an-open-project/contributor-agreement.html" target="_blank"> contributor agreement. <i class="fa fa-external-link"></i></a>
+								By submitting feed, I agree to TPP's <a href="https://tpp.pt/an-open-project/contributor-agreement.html" target="_blank"> contributor agreement. <i class="fa fa-external-link"></i></a>
 							</div>
 						{{else}}
 							<div class="instruction">
 								<input type="checkbox" {{action 'agree'}} value="">
-								By submitting feed, I agree to Transitland's <a href="https://transit.land/an-open-project/contributor-agreement.html" target="_blank"> contributor agreement. <i class="fa fa-external-link"></i></a>
+								By submitting feed, I agree to TPP's <a href="https://tpp.pt/an-open-project/contributor-agreement.html" target="_blank"> contributor agreement. <i class="fa fa-external-link"></i></a>
 							</div>
 						{{/if}}
 						{{#if agreeToTerms}}

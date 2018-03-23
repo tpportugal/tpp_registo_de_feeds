@@ -6,7 +6,7 @@
       </h3>
       <table class="operator-table">
         <tr>
-          <td> Onestop ID <a href="https://transit.land/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
+          <td> Onestop ID <a href="https://tppgeo.cf/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
           <td>{{model.onestop_id}}</td>
         </tr>
         {{#if model.metro}}
@@ -46,7 +46,7 @@
           </td>
         </tr>
         <tr>
-          <td>Data available in Transitland Datastore</td>
+          <td>Data available in TPP Datastore</td>
           <td>
               <ul>
                 <li>
@@ -91,7 +91,7 @@
           <td>
             <ul>
               <li>{{mobility-explorer-link query="operator" operator=model text="View as an interactive map in Mapzen Mobility Explorer"}}</li>
-              <li>{{json-endpoint model.onestop_id "" "JSON from Transitland Datastore API"}}</li>
+              <li>{{json-endpoint model.onestop_id "" "JSON from TPP Datastore API"}}</li>
               <li>{{geojson-endpoint model.onestop_id}}</li>
               <li>{{geojson-io model.onestop_id}}</li>
             </ul>
@@ -102,8 +102,8 @@
           <td>Routes</td>
           <td>
             <ul>
-              <li>{{mobility-explorer-link query="routesByOperator" operator=model text="View as an interactive map in Mapzen Mobility Explorer"}}</li>
-              <li>{{json-endpoint model.onestop_id "routes" "JSON from Transitland Datastore API"}}</li>
+              <li>{{mobility-explorer-link query="routesByOperator" operator=model text="View as an interactive map in TPP Mobility Explorer"}}</li>
+              <li>{{json-endpoint model.onestop_id "routes" "JSON from TPP Datastore API"}}</li>
               <li>{{geojson-endpoint model.onestop_id "routes"}}</li>
               <li>{{geojson-io model.onestop_id "routes"}}</li>
             </ul>
@@ -114,7 +114,7 @@
           <td>
             <ul>
               <li>{{mobility-explorer-link query="stopsByOperator" operator=model text="View as an interactive map in Mapzen Mobility Explorer"}}</li>
-              <li>{{json-endpoint model.onestop_id "stops" "JSON from Transitland Datastore API"}}</li>
+              <li>{{json-endpoint model.onestop_id "stops" "JSON from TPP Datastore API"}}</li>
               <li>{{geojson-endpoint model.onestop_id "stops"}}</li>
               <li>{{geojson-io model.onestop_id "stops"}}</li>
             </ul>
@@ -124,12 +124,12 @@
         <!-- If a feed has been imported at import_level >= 2 then also link to a ScheduleStopPair query. -->
         {{#if operatorFirstFeed.isAtLeastImportLevelTwo}}
         <tr>
-          <td>Schedules<a href="https://transit.land/documentation/datastore/schedules.html" target="_blank"><i class="question-circle ssp-tooltip"></i></a></td>
+          <td>Schedules<a href="https://tpp.pt/documentation/datastore/schedules.html" target="_blank"><i class="question-circle ssp-tooltip"></i></a></td>
           <td>{{ssp-endpoint operatorFirstFeed.onestop_id}}</td>
         </tr>
         {{/if}} {{#if operatorFirstFeed.isAtLeastImportLevelFour}}
         <tr>
-          <td>Route using Mapzen Turn-by-Turn<a href="https://mapzen.com/documentation/turn-by-turn/" target="_blank"><i class="question-circle tbt-tooltip"></i></a></td>
+          <td>Route using TPP Turn-by-Turn<a href="https://tpp.pt/documentation/turn-by-turn/" target="_blank"><i class="question-circle tbt-tooltip"></i></a></td>
           <td>
             <a href="{{linkToTurnByTurnDemo}}">Try routing using demo interface</a>
           </td>

@@ -1,10 +1,10 @@
 # Feed Registry
 
-The Transitland Feed Registry is a directory of public-transit operators and their authoriative data feeds. The directory is a view into Transitland's Datastore API; it lets users browse operators and their feeds, as well as view the license restrictions on each feed. The Feed Registry also lets users contribute additional operators and feeds.
+The TPP Feed Registry is a directory of public-transit operators and their authoriative data feeds. The directory is a view into TPP's Datastore API; it lets users browse operators and their feeds, as well as view the license restrictions on each feed. The Feed Registry also lets users contribute additional operators and feeds.
 
-* [Browse the Feed Registry](https://transit.land/feed-registry/)
-* [How the Feed Registry fits into the Transitland ecosystem](https://transit.land/documentation/)
-* [Get started with contributing to the Feed Registry](https://transit.land/news/2016/02/19/get-started-add-feeds.html)
+* [Browse the Feed Registry](https://tpp.pt/feed-registry/)
+* [How the Feed Registry fits into the TPP ecosystem](https://tpp.pt/documentation/)
+* [Get started with contributing to the Feed Registry](https://tpp.pt/news/2016/02/19/get-started-add-feeds.html)
 
 The Feed Registry was built using Ember, with the Ember CLI. 
 * [ember.js](http://emberjs.com/)
@@ -24,14 +24,14 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/transitland/feed-registry.git`
+* `git clone https://github.com/Rui-Santos/tpp-feed-registry.git`
 * change into the new directory
 * `npm install`
 * `bower install`
 
 ## Configuration
 To change the configuration, edit the config/environment.js file in the following ways:
-* The Feed Registry connects to the [Transitland Datastore API](https://github.com/transitland/transitland-datastore/). By default, it connects to the Datastore API instance running at https://transit.land. To override, change the `datastoreHost` setting. For example: `datastoreHost = 'http://localhost:3000';`.
+* The Feed Registry connects to the [TPP Datastore API](https://github.com/Rui-Santos/tpp-datastore/). By default, it connects to the Datastore API instance running at https://tpp.pt. To override, change the `datastoreHost` setting. For example: `datastoreHost = 'http://localhost:3000';`.
 * By default, the Feed Registry is served at `/`. To change the path for deployment, edit the `baseURL` setting. For example: `baseURL = '/feed-registry';`.
 
 ## Running / Development

@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    datastoreHost: 'https://transit.land',
+    datastoreHost: 'https://tpp.pt',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -19,20 +19,20 @@ module.exports = function(environment) {
       // when it is created
     },
     contentSecurityPolicy: {
-      'default-src': "'none' https://*.cloudfront.net",
-      'connect-src': "'self' https://*.transit.land",
+      'default-src': "'self' https://tpp.pt",
+      'connect-src': "'self' https://tpp.pt",
       'img-src': "'self' data:",
       'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
       'media-src': "'self'",
       'script-src': "'self'",
-      'font-src': "'self' https://fonts.gstatic.com https://*.cloudfront.net"
+      'font-src': "'self' https://fonts.gstatic.com https://tpp.pt"
     },
 
   };
 
   if (environment === 'development') {
-    ENV.datastoreHost = 'https://transit.land';
-    ENV.apiProxyKey= 'transitland-_ngAKUs';
+    ENV.datastoreHost = 'https://tppgeo.cf';
+    ENV.apiProxyKey= 'tpp-_ngAKUs';
   }
 
   if (environment === 'local') {
@@ -58,21 +58,15 @@ module.exports = function(environment) {
   }
 
   if (environment === 'staging') {
-    ENV.datastoreHost = 'https://dev.transit.land';
+    ENV.datastoreHost = 'https://tpp.pt';
     ENV.baseURL = '/feed-registry';
-    ENV.googleAnalytics = {
-      webPropertyId: 'UA-47035811-4'
-    };
-    ENV.apiProxyKey= 'transitland-YFO6jk8';
+    ENV.apiProxyKey= 'tpp-YFO6jk8';
   }
 
   if (environment === 'production') {
-    ENV.datastoreHost = 'https://transit.land';
+    ENV.datastoreHost = 'https://tpp.pt';
     ENV.baseURL = '/feed-registry';
-    ENV.googleAnalytics = {
-      webPropertyId: 'UA-47531031-4'
-    };
-    ENV.apiProxyKey= 'transitland-_ngAKUs';
+    ENV.apiProxyKey= 'tpp-_ngAKUs';
   }
 
   return ENV;

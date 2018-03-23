@@ -1,7 +1,7 @@
 <h4 class="detail">Feed Detail</h4>
 <table class="operator-table">
   <tr>
-    <td>Onestop ID <a href="https://transit.land/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
+    <td>Onestop ID <a href="https://tpp.pt/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
     <td>{{feed.onestop_id}}</td>
   </tr>
   <tr>
@@ -77,11 +77,11 @@
     </tr>
   {{/if}}
   <tr>
-    <td>More information about feed in Transitland</td>
+    <td>More information about feed in TPP</td>
     <td>
       <ul>
-        <li><a href="/dispatcher/feeds/{{feed.onestop_id}}">View statistics and validation reports in Transitland Dispatcher</a></li>
-        <li>{{json-endpoint feed.onestop_id "" "JSON from Transitland Datastore API"}}</li>
+        <li><a href="/dispatcher/feeds/{{feed.onestop_id}}">View statistics and validation reports in TPP Dispatcher</a></li>
+        <li>{{json-endpoint feed.onestop_id "" "JSON from TPP Datastore API"}}</li>
       </ul>
     </td>
   </tr>
@@ -99,7 +99,7 @@
               <li>View Google FeedValidator report: <a href="{{fv.feedvalidator_url}}" target="_blank">{{fa-icon icon="fa-external-link"}}</a></li>
             {{/if}}
             {{#if fv.is_active_feed_version}}
-              <li><em>This is the active feed version in the Transitland Datastore.</em></li>
+              <li><em>This is the active feed version in the TPP Datastore.</em></li>
             {{/if}}
             <hr>
           </ul>
