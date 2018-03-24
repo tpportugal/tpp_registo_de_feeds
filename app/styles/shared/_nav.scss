@@ -26,7 +26,7 @@
 }
 
 .logo-image {
-  background-image: url(/assets/images/logo/transitland_logo.svg);
+  background-image: url(/assets/images/logo/tpp_logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 326px;
@@ -94,10 +94,10 @@ nav a {
 
   .logo-image {
     margin: 0 auto;
-    background-image: url(/assets/images/logo/transitland_logo-mobile@1x.png);
+    background-image: url(/assets/images/logo/tpp_logo-mobile@1x.png);
     @media
     (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        background-image: url(/assets/images/logo/transitland_logo-mobile@2x.png);
+        background-image: url(/assets/images/logo/tpp_logo-mobile@2x.png);
     }
     width: 226px;
     height: 100px;

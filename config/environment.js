@@ -58,7 +58,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'staging') {
-    ENV.datastoreHost = 'https://tpp.pt';
+    ENV.datastoreHost = 'https://tppgeo.cf';
     ENV.baseURL = '/feed-registry';
     ENV.apiProxyKey= 'tpp-YFO6jk8';
   }

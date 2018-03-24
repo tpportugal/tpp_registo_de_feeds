@@ -1,7 +1,7 @@
 {
   "name": "feed-registry",
   "version": "0.0.0",
-  "description": "Small description for feed-registry goes here",
+  "description": "TPP Feed Registry",
   "private": true,
   "directories": {
     "doc": "doc",

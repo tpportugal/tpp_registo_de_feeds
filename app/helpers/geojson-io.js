@@ -4,7 +4,7 @@ import Ember from 'ember';
 
 export default Ember.Handlebars.registerBoundHelper('geojson-io',function(param, attr) {
   var entity = '';
-  var baseURL = 'http://geojson.io/#data=data:text/x-url,'+ encodeURIComponent('http://transit.land/api/v1/');
+  var baseURL = 'http://geojson.io/#data=data:text/x-url,'+ encodeURIComponent('http://tpp.pt/api/v1/');
 
   if (param.charAt(0) === 'o'){
     entity = encodeURIComponent('operators/');
