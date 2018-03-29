@@ -1,5 +1,5 @@
 <div class="fullvw-wrapper">
-  {{add-feed-tabs header-text="ADICIONAR UMA FONTE DE TRANPORTES PÚBLICOS" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UMA FONTE GTFS" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
 </div>
 
 <div class="container">
@@ -58,7 +58,7 @@
           </div>
           <div class="col-sm-8">
             <div class="btn-group" data-toggle="buttons">
-              {{license-form-toggle-button attr=model.license_use_without_attribution text="Sim" value="yes"}} {{license-form-toggle-button attr=model.license_use_without_attribution text="Não" value="no"}} {{license-form-toggle-button attr=model.license_use_without_attribution text="Desconhecido" value="unknown"}}
+              {{license-form-toggle-button attr=model.license_use_without_attribution text="Sim" value="sim"}} {{license-form-toggle-button attr=model.license_use_without_attribution text="Não" value="não"}} {{license-form-toggle-button attr=model.license_use_without_attribution text="Desconhecido" value="desconhecido"}}
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
           </div>
           <div class="col-sm-8">
             <div class="btn-group" data-toggle="buttons">
-              {{license-form-toggle-button attr=model.license_create_derived_product text="Sim" value="yes"}} {{license-form-toggle-button attr=model.license_create_derived_product text="No" value="no"}} {{license-form-toggle-button attr=model.license_create_derived_product text="Desconhecido" value="unknown"}}
+              {{license-form-toggle-button attr=model.license_create_derived_product text="Sim" value="sim"}} {{license-form-toggle-button attr=model.license_create_derived_product text="No" value="não"}} {{license-form-toggle-button attr=model.license_create_derived_product text="Desconhecido" value="desconhecido"}}
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@
           </div>
           <div class="col-sm-8 col-xs-12 input-section">
             <div class="btn-group" data-toggle="buttons">
-              {{license-form-toggle-button attr=model.license_redistribute text="Sim" value="yes"}} {{license-form-toggle-button attr=model.license_redistribute text="Não" value="no"}} {{license-form-toggle-button attr=model.license_redistribute text="Desconhecido" value="unknown"}}
+              {{license-form-toggle-button attr=model.license_redistribute text="Sim" value="sim"}} {{license-form-toggle-button attr=model.license_redistribute text="Não" value="não"}} {{license-form-toggle-button attr=model.license_redistribute text="Desconhecido" value="desconhecido"}}
             </div>
           </div>
         </div>

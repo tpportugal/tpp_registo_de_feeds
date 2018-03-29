@@ -15,7 +15,7 @@ export default Ember.Handlebars.registerBoundHelper('ssp-endpoint',function(para
   if (param.charAt(1) === '-'){
     return new Ember.Handlebars.SafeString('<a href ="' + baseURL + entity + param +'" target = "_blank">JSON da API do Banco de Dados TPP</a>');
   } else if (param.charAt(0) === '/') {
-    return new Ember.Handlebars.SafeString('<a href =' + ENV.datastoreHost + param + ' target = "_blank">' + text + '</a>');
+    return new Ember.Handlebars.SafeString('<a href =' + baseURL + param + ' target = "_blank">' + text + '</a>');
   } else {
     return new Ember.Handlebars.SafeString('<a href =' + baseURL + param + ' target = "_blank">' + param + '</a>');
   }
