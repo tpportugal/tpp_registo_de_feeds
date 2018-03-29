@@ -7,7 +7,7 @@ export default Ember.Service.extend({
   userModel: null,
   parseFetchInfoResponse: function(response) {
     var store = this.get('store');
-    var existing = response.warnings.map(function(i) {return i.onestop_id;});
+    var existing = response.warnings.map(function(i) {return i.onestop_id});
     // Feeds
     // Note: store.normalize operates in-place!
     var feed_data = store.normalize('feed', response.feed);

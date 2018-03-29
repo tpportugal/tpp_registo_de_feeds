@@ -70,7 +70,7 @@ var Feed = DS.Model.extend({
     // ex. gtfs_agency_id['o-9q9-caltrain'] = 'ca-us-caltrain';
     var gtfs_agency_ids = {};
     (this.get('operators_in_feed') || []).forEach(function (oif) {
-      gtfs_agency_ids[oif.operator_onestop_id] = oif.gtfs_agency_id;
+      gtfs_agency_ids[oif.operator_onestop_id] = oif.gtfs_agency_id
     });
     // Filter operators by include_in_changeset
     change.includesOperators = this
@@ -80,7 +80,7 @@ var Feed = DS.Model.extend({
         return {
           gtfsAgencyId: gtfs_agency_ids[operator.get('onestop_id')],
           operatorOnestopId: operator.get('onestop_id')
-        };
+        }
       });
     // Remove any attributes with null values, undefined values, or empty strings
     change = _.omit(change, function (value) {
