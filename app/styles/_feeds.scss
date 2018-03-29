@@ -4,59 +4,59 @@
 }
 
 .caption {
-	font-size: $base-font-size;
-	line-height: $base-line-height;
-	font-weight: $base-font-weight;
-	font-style: italic;
-	color: $grey-color;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  font-style: italic;
+  color: $grey-color;
 }
 
 .direction-btn-wrapper {
-	margin-top: 40px;
-	margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
-	.btn {
-		background-color: $logo-color-3;
-		color: #fff;
-		border: 0;
-		margin: 3px;
-		box-shadow: 0;
-		border-radius: 0;
-		text-align: center;
+  .btn {
+    background-color: $logo-color-3;
+    color: #fff;
+    border: 0;
+    margin: 3px;
+    box-shadow: 0;
+    border-radius: 0;
+    text-align: center;
 
-		&:hover, &:focus {
-			background-color: darken($logo-color-3, 20%);
-		}
+    &:hover, &:focus {
+      background-color: darken($logo-color-3, 20%);
+    }
 
-		&:focus {
-			outline: 2px solid rgba(82,168,236,.4);
-			box-shadow: 0 0 8px rgba(82,168,236,.8) !important;
-		}
-		&:disabled, &[disabled] {
-			background-color: $grey-color;
-			color: $grey-color-light;
+    &:focus {
+      outline: 2px solid rgba(82,168,236,.4);
+      box-shadow: 0 0 8px rgba(82,168,236,.8) !important;
+    }
+    &:disabled, &[disabled] {
+      background-color: $grey-color;
+      color: $grey-color-light;
       cursor: not-allowed;
-		}
-	}
+    }
+  }
 
-	.disabled {
-		background-color: $grey-color;
-		color: $grey-color-light;
+  .disabled {
+    background-color: $grey-color;
+    color: $grey-color-light;
     cursor: not-allowed;
-	}
+  }
 
-	/*submit feed*/
+  /*submit feed*/
 
-	.term-agreement {
-		margin-top: -25px;
-		.instruction {
-			margin-bottom: 5px;
-		}
-	}
-	.btn-submit {
-		padding: 15px 100px;
-		font-size: 18px;
-	}
+  .term-agreement {
+    margin-top: -25px;
+    .instruction {
+      margin-bottom: 5px;
+    }
+  }
+  .btn-submit {
+    padding: 15px 100px;
+    font-size: 18px;
+  }
 
 }
 
@@ -74,18 +74,18 @@
 
 
 textarea{
-	width:100%;
-	padding:10px;
-	border:10px;
+  width:100%;
+  padding:10px;
+  border:10px;
 }
 
 .add-operator-info {
-	margin-top: 80px;
-	margin-bottom: 40px;
-	p {
-		font-size: 18px;
-		line-height: 1.5em;
-	}
+  margin-top: 80px;
+  margin-bottom: 40px;
+  p {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
 }
 
 p.legal-action {

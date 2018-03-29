@@ -1,10 +1,10 @@
 <section id="feed-registry" class="jumbotron">
-	<div class="container">
+  <div class="container">
     <div class="title col-md-12 center-text">
-      <h2>FEED REGISTRY</h2>
+      <h2>REGISTO DE FONTES</h2>
     </div>
 
-    <p>The Feed Registry lists all the transit operators and feeds included in TPP. See what each feed's license will allow you to do with it and click through to get more details about feeds associated with each operator.</p>
+    <p>O Registo de Fontes lista todos os operadores de transportes públicos incluídos no Banco de Dados TPP. Veja o que a licença de cada fonte lhe permite fazer e clique para obter mais detalhes sobre as fontes associadas com cada operador.</p>
 
     {{#if import_level}}
       {{import-level-filter importLevel=import_level totalOperators=model.meta.total}}
@@ -12,40 +12,40 @@
       {{search-bar findPlacesAndNames=(action "findPlacesAndNames") filterByPlaceOrName=(action "filterByPlaceOrName") placeOrName=placeOrName model=placesAndNamesModel totalOperators=model.meta.total}}
     {{/if}}
 
-		<br>
-		<main>
-			{{operator-table operators=model sortOrder=sort_order sortKey=sort_key import_level=import_level country=country state=state metro=metro name=name short_name=short_name changeSort=(action "transitionToNewSort")}}
-			<div class="row direction-btn-wrapper">
-				{{pagination-controls route="index" hasPreviousPage=hasPreviousPage hasNextPage=hasNextPage previousOffset=previousOffset nextOffset=nextOffset}}
-			</div>
-		</main>
+    <br>
+    <main>
+      {{operator-table operators=model sortOrder=sort_order sortKey=sort_key import_level=import_level country=country state=state metro=metro name=name short_name=short_name changeSort=(action "transitionToNewSort")}}
+      <div class="row direction-btn-wrapper">
+        {{pagination-controls route="index" hasPreviousPage=hasPreviousPage hasNextPage=hasNextPage previousOffset=previousOffset nextOffset=nextOffset}}
+      </div>
+    </main>
 
     <div class="row">
       <div class="col-xs-12">
         <div class="cta-container">
           <div class="cta-text">
-            <h3>Know a feed that's missing?</h3>
+            <h3>Sabe de uma fonte em falta?</h3>
           </div>
           <div class="cta-btn">
             {{#link-to "feeds.new" class="btn btn-action" role="button" }}
-              Add a Feed
+              Adicionar uma Fonte
             {{/link-to}}
           </div>
         </div>
       </div>
     </div>
+    
     <p>
-      We would love your help to expand TPP's coverage throughout the country. If you know of a feed, {{#link-to "feeds.new"}}add it here{{/link-to}}. To correct an error in an existing entry, click the operator name to view and edit its details.
+      Gostaríamos de ter a sua ajuda para expandir a cobertura TPP por todo o país. Se souber de uma fonte, {{#link-to "feeds.new"}}adicione-a aqui{{/link-to}}. Para corrigir algum erro numa das entradas existentes, clique no nome do operador para ver e editar os seus detalhes.
     </p>
 
-		<p>
-			Looking for machine-readable JSON instead? The <a href="/how-it-works/#slide-3">Datastore API</a> can provide all these {{json-endpoint "operators" "" "operators"}} or all these {{json-endpoint "feeds" "" "feeds"}}.
-		</p>
+    <p>
+    Está à procura de JSON? A <a href="/how-it-works/#slide-3">API do Banco de Dados TPP</a> pode providenciar todos estes {{json-endpoint "operators" "" "operadores"}} ou todas estas {{json-endpoint "feeds" "" "fontes"}}.
+    </p>
 
-		<p class="legal-action">
-			This list is provided for informational purposes only and does not constitute legal advice. We do not guarantee the accuracy or reliability of the Feed Registry whatsoever. You are advised to consult with your own legal counsel before using and relying
-			on the information provided in the Feed Registry.
-		</p>
+    <p class="legal-action">
+    Esta lista é providenciada apenas a título informativo e não constitui aconselhamento legal. Não lhe podemos garantir a precisão ou fiabilidade do Registo de Fontes de forma alguma. Aconselhamos a que consulte o seu próprio advogado antes de utilizar e confiar nas informações fornecidas no Registo de Fontes.
+    </p>
 
-	</div>
+  </div>
 </section>

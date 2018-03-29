@@ -1,67 +1,67 @@
 <div class="operator-info">
-	<div class="input-form-wrapper">
-	{{#unless singleOperator}}
-		{{#if minimumOperator}}
-			<div class="{{if operator.include_in_changeset "yes"}} {{unless operator.include_in_changeset "no"}} row inline-items">
-				<div class="col-sm-4 inline-label">
-					<div class="input-form-label">Include this operator?</div>
-				</div>
-				<div class="col-sm-8">
-					<div class="btn-group">
-						<!--ember puts dummy span on top of component, this span is to mimick that behaviour-->
-						<span>
-							<button class="btn btn-default yes {{if operator.include_in_changeset "active"}}" type="button" {{action "clickYes"}}>Yes</button>
-						</span>
-						<span>
-							<button class="btn btn-default no {{unless operator.include_in_changeset "active"}}" type="button" {{action "clickNo"}}>No</button>
-						</span>
-					</div>
-				</div>
-			</div>
-		{{else}}
-				<div class="error-tip">
-			 		<i class="fa fa-exclamation-circle"></i> Please include at least one operator to continue.
-			 	</div>
-			<div class="{{if operator.include_in_changeset "yes"}} {{unless operator.include_in_changeset "no"}} error inline-items row">
-				<div class="col-sm-4 inline-label">
-					<div class="input-form-label">Include this operator?</div>
-				</div>
-				<div class="col-sm-8">
-					<div class="btn-group">
-						<!--ember puts dummy span on top of component, this span is to mimick that behaviour-->
-						<span>
-							<button class="btn btn-default yes {{if operator.include_in_changeset "active"}}" type="button" {{action "clickYes"}}>Yes</button>
-						</span>
-						<span>
-							<button class="btn btn-default no {{unless operator.include_in_changeset "active"}}" type="button" {{action "clickNo"}}>No</button>
-						</span>
-					</div>
-				</div>
-			</div>
-		{{/if}}
-	{{/unless}}
-		<div class="row">
-			<div class="col-sm-12 col-xs-12 input-section">
-				<div class="input-form-label">Operator full name</div>
-				<div class="input-form-field">{{input type="text" value=operator.name placeholder="e.g. Bay Area Rapid Transit"}}</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 col-xs-12 input-section">
-				<div class="input-form-label">Operator short name (optional)</div>
-				<div class="input-form-field">{{input type="text" value=operator.short_name placeholder="e.g. BART"}}</div>
-			</div>
-			<div class="col-sm-6 col-xs-12 input-section">
-				<div class="input-form-label">Website</div>
-				<div class="input-form-field">{{input type="text" value=operator.website placeholder="http://somethinguseful.com"}}</div>
-			</div>
-		</div>
-		<div class="row">
-			{{operator-form/country-region-select operator=operator}}
-		</div>
-	</div>
+<div class="input-form-wrapper">
+  {{#unless singleOperator}}
+    {{#if minimumOperator}}
+      <div class="{{if operator.include_in_changeset "yes"}} {{unless operator.include_in_changeset "no"}} row inline-items">
+        <div class="col-sm-4 inline-label">
+          <div class="input-form-label">Incluir este operador?</div>
+        </div>
+        <div class="col-sm-8">
+          <div class="btn-group">
+            <!--ember puts dummy span on top of component, this span is to mimick that behaviour-->
+            <span>
+              <button class="btn btn-default yes {{if operator.include_in_changeset "active"}}" type="button" {{action "clickYes"}}>Sim</button>
+            </span>
+            <span>
+              <button class="btn btn-default no {{unless operator.include_in_changeset "active"}}" type="button" {{action "clickNo"}}>Não</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    {{else}}
+        <div class="error-tip">
+          <i class="fa fa-exclamation-circle"></i> Por favor inclua pelo menos um operador para continuar.
+        </div>
+      <div class="{{if operator.include_in_changeset "yes"}} {{unless operator.include_in_changeset "no"}} error inline-items row">
+        <div class="col-sm-4 inline-label">
+          <div class="input-form-label">Incluir este operador?</div>
+        </div>
+        <div class="col-sm-8">
+          <div class="btn-group">
+            <!--ember puts dummy span on top of component, this span is to mimick that behaviour-->
+            <span>
+              <button class="btn btn-default yes {{if operator.include_in_changeset "active"}}" type="button" {{action "clickYes"}}>Sim</button>
+            </span>
+            <span>
+              <button class="btn btn-default no {{unless operator.include_in_changeset "active"}}" type="button" {{action "clickNo"}}>Não</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  {{/unless}}
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 input-section">
+        <div class="input-form-label">Nome completo do Operador</div>
+        <div class="input-form-field">{{input type="text" value=operator.name placeholder="p.ex. Sociedade de Transportes Colectivos do Porto"}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-xs-12 input-section">
+        <div class="input-form-label">Sigla/Acrónimo do Operador (opcional)</div>
+        <div class="input-form-field">{{input type="text" value=operator.short_name placeholder="p.ex. STCP"}}</div>
+      </div>
+      <div class="col-sm-6 col-xs-12 input-section">
+        <div class="input-form-label">Sítio Web</div>
+        <div class="input-form-field">{{input type="text" value=operator.website placeholder="http://exemplo.com"}}</div>
+      </div>
+    </div>
+    <div class="row">
+      {{operator-form/country-region-select operator=operator}}
+    </div>
+  </div>
 
-	<div class="caption">
-		For operators that spread across multiple cities or states, specify the operator headquarters.
-	</div>
+  <div class="caption">
+    Para operadores que servem múltiplas cidades, concelhos, distritos ou regiões, especifique a sede do operador.
+  </div>
 </div>

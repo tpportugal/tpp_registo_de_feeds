@@ -1,109 +1,106 @@
 <div class="fullvw-wrapper">
-	{{add-feed-tabs header-text="ADD A TRANSIT FEED" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UMA FONTE DE TRANPORTES PÚBLICOS" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
 </div>
 
 <div class="container">
-	<div class="add-operator-info">
-		<p>
-			Many feeds have licenses or legal terms that apply to them. Provide as much information as you can about the license for the feed. It is okay if you are unable to answer all the license questions.
-		</p>
-		<p>
-			{{documentation-link "feed-registry/add-a-feed.html#license" "Learn more about licenses"}}
-		</p>
-		{{#if feedExists}}
-			{{feed-exists-warning}}
-		{{/if}}
-	</div>
-		<div class="input-form-wrapper">
-			<div class="row inline-items {{if license_present_mode "yes"}}{{unless license_present_mode "no"}}">
-				<div class="col-sm-4 inline-label">
-					<div class="input-form-label"> Does the feed have a license?</div>
-				</div>
-				<div class="col-sm-8">
-						<div class="btn-group" {{action "click"}}>
-							{{license-form-toggle-button attr=license_present_mode text="yes" value=true}}
-							{{license-form-toggle-button attr=license_present_mode text="no" value=false}}
-						</div>
-				</div>
-			</div>
-			{{#if license_present_mode}}
-				<div class="row">
-					<div class="col-sm-7 col-xs-12 input-section">
-						<div class="input-form-label">License name</div>
-						<div class="input-form-field">{{input type="text" value=this.model.license_name placeholder="e.g. Creative Commons 2.0"}}</div>
-					</div>
-					<div class="col-sm-5 col-xs-12 input-section">
-						<div class="input-form-label">License URL</div>
-						<div class="input-form-field">{{input type="text" value=this.model.license_url placeholder="http://..."}}</div>
-					</div>
-				</div>
-				<div class="row inline-items {{if interpret_license_mode "yes"}}{{unless interpret_license_mode "no"}}">
-					<div class="col-sm-6 inline-label">
-						<div class="input-form-label">Do you feel comfortable interpreting the license?</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="btn-group" data-toggle="buttons" {{action "click"}}>
-							{{license-form-toggle-button attr=interpret_license_mode text="yes" value=true}} {{license-form-toggle-button attr=interpret_license_mode text="no" value=false}}
-						</div>
-					</div>
-				</div>
-				{{#if interpret_license_mode}}
-					<div class="row">
-						<div class="col-sm-12 col-xs-12 input-form-guide">Does the license allow:</div>
-					</div>
+  <div class="add-operator-info">
+    <p>
+      Muitas fontes têm licenças ou termos legais que se lhes aplicam. Providencie o máximo de informação que conseguir acerca da licença para esta fonte. Não há problema se não conseguir responder a todas as perguntas sobre a licença.
+    </p>
+    <p>
+      {{documentation-link "feed-registry/add-a-feed.html#license" "Aprenda mais sobre licenças"}}
+    </p>
+    {{#if feedExists}}
+      {{feed-exists-warning}}
+    {{/if}}
+  </div>
+  <div class="input-form-wrapper">
+    <div class="row inline-items {{if license_present_mode "sim"}}{{unless license_present_mode "não"}}">
+      <div class="col-sm-4 inline-label">
+        <div class="input-form-label">Esta fonte tem uma licença?</div>
+      </div>
+      <div class="col-sm-8">
+        <div class="btn-group" {{action "click"}}>
+          {{license-form-toggle-button attr=license_present_mode text="sim" value=true}}
+          {{license-form-toggle-button attr=license_present_mode text="não" value=false}}
+        </div>
+      </div>
+    </div>
+    {{#if license_present_mode}}
+      <div class="row">
+        <div class="col-sm-7 col-xs-12 input-section">
+          <div class="input-form-label">Nome da Licença</div>
+          <div class="input-form-field">{{input type="text" value=this.model.license_name placeholder="e.g. Creative Commons 2.0"}}</div>
+        </div>
+        <div class="col-sm-5 col-xs-12 input-section">
+          <div class="input-form-label">URL da Licença</div>
+          <div class="input-form-field">{{input type="text" value=this.model.license_url placeholder="http://..."}}</div>
+        </div>
+      </div>
+      <div class="row inline-items {{if interpret_license_mode "sim"}}{{unless interpret_license_mode "não"}}">
+        <div class="col-sm-6 inline-label">
+          <div class="input-form-label">Sente-se confortável para interpretar a licença?</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="btn-group" data-toggle="buttons" {{action "click"}}>
+            {{license-form-toggle-button attr=interpret_license_mode text="sim" value=true}} {{license-form-toggle-button attr=interpret_license_mode text="não" value=false}}
+          </div>
+        </div>
+      </div>
+      {{#if interpret_license_mode}}
+        <div class="row">
+          <div class="col-sm-12 col-xs-12 input-form-guide">Esta licença permite:</div>
+        </div>
 
-					<div class="row inline-items">
-						<div class="col-sm-4 col-xs-12 inline-label">
-							<div class="input-form-label">usage without attribution?</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="btn-group" data-toggle="buttons">
-								{{license-form-toggle-button attr=model.license_use_without_attribution text="Yes" value="yes"}} {{license-form-toggle-button attr=model.license_use_without_attribution text="No" value="no"}} {{license-form-toggle-button attr=model.license_use_without_attribution
-									text="Unknown" value="unknown"}}
-							</div>
-						</div>
-					</div>
-					{{#if showLicenseAttributionText}}
-						<div class="row">
-							<div class="col-sm-12 col-xs-12 inline-label">
-								<div class="input-form-label">What attribution text, if any, is required?</div>
-								<div class="input-form-field">{{textarea value=model.license_attribution_text placeholder="e.g., Using data copyright (C) CP - Comboios de Portugal"}}</div>
-							</div>
-						</div>
-					{{/if}}
-					<div class="row inline-items">
-						<div class="col-sm-4 col-xs-12 inline-label">
-							<div class="input-form-label">derived data products?</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="btn-group" data-toggle="buttons">
-									{{license-form-toggle-button attr=model.license_create_derived_product text="Yes" value="yes"}} {{license-form-toggle-button attr=model.license_create_derived_product text="No" value="no"}} {{license-form-toggle-button attr=model.license_create_derived_product
-									text="Unknown" value="unknown"}}
-							</div>
-						</div>
-					</div>
-					<div class="row inline-items">
-						<div class="col-sm-4 col-xs-12 inline-label">
-							<div class="input-form-label">redistribution of entire feed?</div>
-						</div>
-						<div class="col-sm-8 col-xs-12 input-section">
-							<div class="btn-group" data-toggle="buttons">
-								{{license-form-toggle-button attr=model.license_redistribute text="Yes" value="yes"}} {{license-form-toggle-button attr=model.license_redistribute text="No" value="no"}} {{license-form-toggle-button attr=model.license_redistribute text="Unknown"
-									value="unknown"}}
-							</div>
-						</div>
-					</div>
-				{{/if}}
-			{{/if}}
-			</div>
-		<div class="row direction-btn-wrapper">
-			<div class="col-sm-12">
-				{{#link-to 'feeds.new.add-operator' class="btn btn-action pull-left" }}
-					<i class="fa fa-chevron-left"></i> back
-				{{/link-to}}
-				{{#link-to 'feeds.new.submit' class="btn btn-action pull-right" }}
-					Next <i class="fa fa-chevron-right"></i>
-				{{/link-to}}
-			</div>
-		</div>
+        <div class="row inline-items">
+          <div class="col-sm-4 col-xs-12 inline-label">
+            <div class="input-form-label">utilização sem atribuição?</div>
+          </div>
+          <div class="col-sm-8">
+            <div class="btn-group" data-toggle="buttons">
+              {{license-form-toggle-button attr=model.license_use_without_attribution text="Sim" value="yes"}} {{license-form-toggle-button attr=model.license_use_without_attribution text="Não" value="no"}} {{license-form-toggle-button attr=model.license_use_without_attribution text="Desconhecido" value="unknown"}}
+            </div>
+          </div>
+        </div>
+        {{#if showLicenseAttributionText}}
+          <div class="row">
+            <div class="col-sm-12 col-xs-12 inline-label">
+              <div class="input-form-label">Qual é o texto para atribuição, se obrigatório?</div>
+              <div class="input-form-field">{{textarea value=model.license_attribution_text placeholder="e.g., Utilizando dados copyright (C) CP - Comboios de Portugal"}}</div>
+            </div>
+          </div>
+        {{/if}}
+        <div class="row inline-items">
+          <div class="col-sm-4 col-xs-12 inline-label">
+            <div class="input-form-label">produtos de dados derivados?</div>
+          </div>
+          <div class="col-sm-8">
+            <div class="btn-group" data-toggle="buttons">
+              {{license-form-toggle-button attr=model.license_create_derived_product text="Sim" value="yes"}} {{license-form-toggle-button attr=model.license_create_derived_product text="No" value="no"}} {{license-form-toggle-button attr=model.license_create_derived_product text="Desconhecido" value="unknown"}}
+            </div>
+          </div>
+        </div>
+        <div class="row inline-items">
+          <div class="col-sm-4 col-xs-12 inline-label">
+            <div class="input-form-label">redistribuição da fonte completa?</div>
+          </div>
+          <div class="col-sm-8 col-xs-12 input-section">
+            <div class="btn-group" data-toggle="buttons">
+              {{license-form-toggle-button attr=model.license_redistribute text="Sim" value="yes"}} {{license-form-toggle-button attr=model.license_redistribute text="Não" value="no"}} {{license-form-toggle-button attr=model.license_redistribute text="Desconhecido" value="unknown"}}
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+  <div class="row direction-btn-wrapper">
+    <div class="col-sm-12">
+      {{#link-to 'feeds.new.add-operator' class="btn btn-action pull-left" }}
+        <i class="fa fa-chevron-left"></i> Anterior
+      {{/link-to}}
+      {{#link-to 'feeds.new.submit' class="btn btn-action pull-right" }}
+        Próximo <i class="fa fa-chevron-right"></i>
+      {{/link-to}}
+    </div>
+  </div>
 </div>

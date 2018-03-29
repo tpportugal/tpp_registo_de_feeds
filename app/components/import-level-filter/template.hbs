@@ -3,12 +3,14 @@
     <div class="filterInfo">
       {{#if supportedImportLevel}}
         {{#if feedImportLevelFour}}
-          You are viewing <strong>only the feed{{#if pluralOperators}}s{{/if}} that are routable</strong>. Operator shape, stop points, route lines, and schedule data are also available from these feeds.
+          Está a visualizar <strong>apenas a{{#if pluralOperators}}s{{/if}} fonte{{#if pluralOperators}}s{{/if}} que são passíveis de ser roteadas</strong>. Forma do operador, pontos de paragem, linhas de rotas e dados de horários também estão disponíveis nestas fontes.
+
         {{else}}
-          You are viewing <strong>only</strong> the {{totalOperators}} feed{{#if pluralOperators}}s{{/if}} with {{#if feedImportLevelZero}} operator shape{{/if}}{{#if feedImportLevelOne}}, stop points, {{#unless feedImportLevelTwo}}and{{/unless}} route lines{{/if}}{{#if feedImportLevelTwo}}, and schedule{{/if}} data available.
+          Está a visualizar <strong>apenas</strong> {{totalOperators}} fonte{{#if pluralOperators}}s{{/if}} com dados de
+          {{#if feedImportLevelZero}} forma do operador{{/if}}{{#if feedImportLevelOne}}, pontos de paragem, {{#unless feedImportLevelTwo}}and{{/unless}} linhas de rota{{/if}}{{#if feedImportLevelTwo}}, e horários{{/if}} disponíve{{#if pluralOperators}}is{{else}}l{{/if}}.
         {{/if}}
       {{else}}
-        You are filtering by an unsupported import level.
+        Está a filtrar por um nível de importação não suportado.
       {{/if}}
     </div>
   </div>

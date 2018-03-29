@@ -1,27 +1,27 @@
 //getting rid of padding of jumbotron on add-operator page, because there is sub nav
 #add-operator.jumbotron {
-	padding: 0;
-	padding-bottom: 90px;
+  padding: 0;
+  padding-bottom: 90px;
 }
 
 .fullvw-wrapper {
-	width: 100 vw;
+  width: 100 vw;
 }
 
 .p {
-	text-align: center;
-	margin: 40px 50px 40px 50px;
-	font-family: $base-font-family;
-	font-size: $base-font-size;
-	line-height: $base-line-height;
-	font-weight: $base-font-weight;
+  text-align: center;
+  margin: 40px 50px 40px 50px;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
 }
 
 .email-caption {
-	text-align: left;
-	font-family: $base-font-family;
-	font-size: $base-font-size;
-	line-height: $base-line-height;
-	font-weight: $base-font-weight;
-	color: $grey-color;
+  text-align: left;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  color: $grey-color;
 }

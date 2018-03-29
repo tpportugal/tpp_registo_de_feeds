@@ -82,15 +82,20 @@
         @extend .tooltip-point;
       }
       &.onestop-id-tooltip:after {
-        content: 'Onestop IDs are globally unique identifiers for transit feeds, operators, routes, and stops. Use them to query the TPP API or use them in your own apps and analyses.';
+        content: 'IDs Onestop são identificadores globais únicos para fontes de transportes públicos, operadores, rotas e paragens. Utilize-os para questionar a API TPP ou nas suas próprias aplicações e análises.';
+
         @extend .tooltip;
       }
       &.ssp-tooltip:after {
-        content: 'Schedule-stop-pairs are schedule data, represented as possible trips between two stops.';
+        content: 'ScheduleStopPairs são dados de horário, representados como possíveis viajens entre duas paragens.';
+        @extend .tooltip;
+      }
+      &.tbt-tooltip:after {
+        content: "O TPP Turn-by-Turn utiliza o Banco de Dados TPP e o motor de rotas Valhalla para pesquisar rotas multimodais de transportes públicos.";
         @extend .tooltip;
       }
       &.attribution-text-tooltip:after {
-        content: "This feed's license requires you to include this text wherever you use its data.";
+        content: "A licença desta fonte requer que inclua este texto onde quer que utilize os seus dados.";
         @extend .tooltip;
       }
     }

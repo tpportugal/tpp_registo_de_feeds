@@ -9,8 +9,8 @@
   autofocus="autofocus"
   searchField="display"
   onopen=(action "findPlacesAndNames")
-  placeholder="Search by operator name or location"
-  searchPlaceholder="Type to filter..."
+  placeholder="Pesquisar por nome de operador ou localização"
+  searchPlaceholder="Tipo a filtrar..."
   onchange=(action "setPlaceOrName")
   as |placeOrName|
 }}
@@ -20,7 +20,7 @@
 {{#if placeOrName}}
   <div class="filterInfoContainer">
     <div class="filterInfoSubcontainer">
-      <div class="filterInfo">There {{#if multipleOperators}}are{{else}}is{{/if}} currently <strong>{{totalOperators}}</strong> operator{{#if multipleOperators}}s{{/if}} available in the TPP Datastore with {{remove-underscore placeOrName.type}} of <strong>{{placeOrName.display}}</strong>.</div>
+      <div class="filterInfo">Atualmente {{#if multipleOperators}}existem{{else}}existe{{/if}} <strong>{{totalOperators}}</strong> operador{{#if multipleOperators}}es{{/if}} {{#if multipleOperators}}disponíveis{{else}}disponível{{/if}} no Banco de Dados TPP com o {{remove-underscore placeOrName.type}} de <strong>{{placeOrName.display}}</strong>.</div>
     </div>
   </div>
 {{/if}}

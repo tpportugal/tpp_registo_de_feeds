@@ -13,16 +13,16 @@ export default Ember.Handlebars.registerBoundHelper('geojson-endpoint', function
   }
 
   if (attr === "routes") {
-    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + 'routes.geojson?operated_by=' + param + '&per_page=false" target = "_blank">GeoJSON from TPP Datastore API</a>');
+    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + 'routes.geojson?operated_by=' + param + '&per_page=false" target = "_blank">GeoJSON da API do Banco de Dados TPP</a>');
   } else if (attr === "stops") {
-    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + 'stops.geojson?served_by=' + param + '&per_page=false" target = "_blank">GeoJSON from TPP Datastore API</a>');
+    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + 'stops.geojson?served_by=' + param + '&per_page=false" target = "_blank">GeoJSON da API do Banco de Dados TPP</a>');
   } else {
     if (param.charAt(1) === '-') {
-      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + entity + param + '.geojson?per_page=false" target = "_blank">GeoJSON from TPP Datastore API</a>');
+      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + entity + param + '.geojson?per_page=false" target = "_blank">GeoJSON da API do Banco de Dados TPP</a>');
     } else if (param.charAt(0) === '/') {
-      return new Ember.Handlebars.SafeString('<a href ="' + ENV.datastoreHost + param + '.geojson?per_page=false" target = "_blank">GeoJSON from TPP Datastore API</a>');
+      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + param + '.geojson?per_page=false" target = "_blank">GeoJSON da API do Banco de Dados TPP</a>');
     } else {
-      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + param + '.geojson?per_page=false" target = "_blank">GeoJSON from TPP Datastore API</a>');
+      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + param + '.geojson?per_page=false" target = "_blank">GeoJSON da API do Banco de Dados TPP</a>');
     }
   }
 });

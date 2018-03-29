@@ -14,9 +14,8 @@ export default Ember.Controller.extend({
       this.transitionToRoute('feeds.new.add-operator');
     },
     updateProgress: function(status, progress) {
-	    this.set('progressStatus', status);
-	    this.set('progress', progress);
-  	}
+      this.set('progressStatus', status);
+      this.set('progress', progress);
+    }
   }
-
 });

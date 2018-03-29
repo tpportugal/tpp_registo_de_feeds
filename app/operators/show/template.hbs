@@ -1,36 +1,36 @@
 <section id="feed-registry" class="jumbotron">
   <div class="container">
     <div class="page-container operator-page">
-      {{#link-to "index"}} {{fa-icon icon="fa-caret-left"}} All Operators {{/link-to}}
+      {{#link-to "index"}} {{fa-icon icon="fa-caret-left"}} Todos os Operadores{{/link-to}}
       <h3 class="agency-name">{{model.name}} {{#if model.short_name}} ({{model.short_name}}) {{/if}}
       </h3>
       <table class="operator-table">
         <tr>
-          <td> Onestop ID <a href="https://tppgeo.cf/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
+          <td>ID Onestop <a href="https://tpp.pt/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
           <td>{{model.onestop_id}}</td>
         </tr>
         {{#if model.metro}}
           <tr>
-            <td>Metro region</td>
-            <td>{{model.metro}} {{#link-to 'index' (query-params metro=model.metro import_level="null" country="null" state="null" name="null" short_name="null" offset=0)}}{{fa-icon icon="search-plus" title="Search for all operators in this metro region"}}{{/link-to}}</td>
+            <td>Concelho</td>
+            <td>{{model.metro}} {{#link-to 'index' (query-params metro=model.metro import_level="null" country="null" state="null" name="null" short_name="null" offset=0)}}{{fa-icon icon="search-plus" title="Procure por todos os operadores neste concelho"}}{{/link-to}}</td>
           </tr>
         {{/if}}
         {{#if model.state}}
           <tr>
-            <td>State/Province</td>
-            <td>{{model.stateDisplayName}} ({{model.state}}) {{#link-to 'index' (query-params state=model.state import_level="null" country="null" metro="null" name="null" short_name="null" offset=0)}}{{fa-icon icon="search-plus" title="Search for all operators in this state"}}{{/link-to}}</td>
+            <td>Distrito/Região</td>
+            <td>{{model.stateDisplayName}} ({{model.state}}) {{#link-to 'index' (query-params state=model.state import_level="null" country="null" metro="null" name="null" short_name="null" offset=0)}}{{fa-icon icon="search-plus" title="Procure por todos os operadores neste distrito/região"}}{{/link-to}}</td>
           </tr>
         {{/if}}
         <tr>
-          <td>Country</td>
-          <td>{{model.countryDisplayName}} ({{model.country}}) {{#link-to 'index' (query-params country=model.country import_level="null" state="null" metro="null" name="null" short_name="null" offset=0)}}{{fa-icon icon="search-plus" title="Search for all operators in this country"}}{{/link-to}}</td>
+          <td>País</td>
+          <td>{{model.countryDisplayName}} ({{model.country}}) {{#link-to 'index' (query-params country=model.country import_level="null" state="null" metro="null" name="null" short_name="null" offset=0)}}{{fa-icon icon="search-plus" title="Procure por todos os operadores neste país"}}{{/link-to}}</td>
         </tr>
         <tr>
-          <td>Website</td>
-          <td> <a href="{{model.website}}" target="_blank">{{model.website}}</a></td>
+          <td>Sítio Web</td>
+          <td><a href="{{model.website}}" target="_blank">{{model.website}}</a></td>
         </tr>
         <tr>
-          <td>Timezone</td>
+          <td>Zona Horária</td>
           <td>{{model.timezone}}</td>
         </tr>
         <tr>
@@ -46,11 +46,11 @@
           </td>
         </tr>
         <tr>
-          <td>Data available in TPP Datastore</td>
+          <td>Disponível no Banco de Dados TPP</td>
           <td>
               <ul>
                 <li>
-                  operator service area
+                  área de serviço
                   {{#if operatorFirstFeed.isAtLeastImportLevelZero}}
                     {{fa-icon "check-square-o"}}
                   {{else}}
@@ -58,7 +58,7 @@
                   {{/if}}
                 </li>
                 <li>
-                  stops
+                  paragens
                   {{#if operatorFirstFeed.isAtLeastImportLevelOne}}
                     {{fa-icon "check-square-o"}}
                   {{else}}
@@ -66,7 +66,7 @@
                   {{/if}}
                 </li>
                 <li>
-                  routes
+                  rotas
                   {{#if operatorFirstFeed.isAtLeastImportLevelOne}}
                     {{fa-icon "check-square-o"}}
                   {{else}}
@@ -74,7 +74,7 @@
                   {{/if}}
                 </li>
                 <li>
-                  schedule
+                  horários
                   {{#if operatorFirstFeed.isAtLeastImportLevelTwo}}
                     {{fa-icon "check-square-o"}}
                   {{else}}
@@ -87,11 +87,11 @@
         <!-- If a feed has been imported at import_level >= 1 then also link to GeoJSON for routes and stops. -->
         {{#if operatorFirstFeed.isAtLeastImportLevelZero}}
         <tr>
-          <td>Operator service area</td>
+          <td>Área de serviço</td>
           <td>
             <ul>
-              <li>{{mobility-explorer-link query="operator" operator=model text="View as an interactive map in Mapzen Mobility Explorer"}}</li>
-              <li>{{json-endpoint model.onestop_id "" "JSON from TPP Datastore API"}}</li>
+              <li>{{mobility-explorer-link query="operator" operator=model text="Ver como um mapa interativo no Explorador de Mobilidade TPP"}}</li>
+              <li>{{json-endpoint model.onestop_id "" "JSON da API do Banco de Dados TPP"}}</li>
               <li>{{geojson-endpoint model.onestop_id}}</li>
               <li>{{geojson-io model.onestop_id}}</li>
             </ul>
@@ -99,22 +99,22 @@
         </tr>
         {{/if}} {{#if operatorFirstFeed.isAtLeastImportLevelOne}}
         <tr>
-          <td>Routes</td>
+          <td>Rotas</td>
           <td>
             <ul>
-              <li>{{mobility-explorer-link query="routesByOperator" operator=model text="View as an interactive map in TPP Mobility Explorer"}}</li>
-              <li>{{json-endpoint model.onestop_id "routes" "JSON from TPP Datastore API"}}</li>
+              <li>{{mobility-explorer-link query="routesByOperator" operator=model text="Ver como um mapa interativo no Explorador de Mobilidade TPP"}}</li>
+              <li>{{json-endpoint model.onestop_id "routes" "JSON da API do Banco de Dados TPP"}}</li>
               <li>{{geojson-endpoint model.onestop_id "routes"}}</li>
               <li>{{geojson-io model.onestop_id "routes"}}</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td>Stops</td>
+          <td>Paragens</td>
           <td>
             <ul>
-              <li>{{mobility-explorer-link query="stopsByOperator" operator=model text="View as an interactive map in Mapzen Mobility Explorer"}}</li>
-              <li>{{json-endpoint model.onestop_id "stops" "JSON from TPP Datastore API"}}</li>
+              <li>{{mobility-explorer-link query="stopsByOperator" operator=model text="Ver como um mapa interativo no Explorador de Mobilidade TPP"}}</li>
+              <li>{{json-endpoint model.onestop_id "stops" "JSON da API do Banco de Dados TPP"}}</li>
               <li>{{geojson-endpoint model.onestop_id "stops"}}</li>
               <li>{{geojson-io model.onestop_id "stops"}}</li>
             </ul>
@@ -124,21 +124,21 @@
         <!-- If a feed has been imported at import_level >= 2 then also link to a ScheduleStopPair query. -->
         {{#if operatorFirstFeed.isAtLeastImportLevelTwo}}
         <tr>
-          <td>Schedules<a href="https://tpp.pt/documentation/datastore/schedules.html" target="_blank"><i class="question-circle ssp-tooltip"></i></a></td>
+          <td>Horários <a href="https://tpp.pt/documentation/datastore/schedules.html" target="_blank"><i class="question-circle ssp-tooltip"></i></a></td>
           <td>{{ssp-endpoint operatorFirstFeed.onestop_id}}</td>
         </tr>
         {{/if}} {{#if operatorFirstFeed.isAtLeastImportLevelFour}}
         <tr>
-          <td>Route using TPP Turn-by-Turn<a href="https://tpp.pt/documentation/turn-by-turn/" target="_blank"><i class="question-circle tbt-tooltip"></i></a></td>
+          <td>Criar rotas com TPP Turn-by-Turn<a href="https://tpp.pt/documentation/turn-by-turn/" target="_blank"><i class="question-circle tbt-tooltip"></i></a></td>
           <td>
-            <a href="{{linkToTurnByTurnDemo}}">Try routing using demo interface</a>
+            <a href="{{linkToTurnByTurnDemo}}">Tente criar uma rota na aplicação de demonstração</a>
           </td>
         </tr>
         {{/if}}
       </table>
 
 
-      {{#each feed in model.feeds}} {{feed-detail feed=feed}} {{/each}}
+      {{#each model.feeds as |feed|}} {{feed-detail feed=feed}} {{/each}}
 
     </div>
   </div>

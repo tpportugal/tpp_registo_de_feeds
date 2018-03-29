@@ -1,68 +1,68 @@
 {{#if isLoading}}
-	{{loading-spinner progress=progress progressStatus=progressStatus}}
+  {{loading-spinner progress=progress progressStatus=progressStatus}}
 {{/if}}
 
 <div class="fullvw-wrapper">
-	{{add-feed-tabs header-text="ADD A TRANSIT FEED" upload-tab-class="tab current" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UMA FONTE DE TRANPORTES PÚBLICOS" upload-tab-class="tab current" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
 </div>
 <div class="container">
-	<div class="add-operator-info">
-		<p>
-		TPP brings together many sources of transit data to build a <a href="https://tpp.pt/feed-registry" target="_blank">directory of operators and feeds</a> that can be edited by transit enthusiasts and developers. Your contributions can help expand TPP's coverage throughout the country.
-		</p>
-		<p>
-		If you know of a feed, please continue below!
-		</p>
-		<p>
-			{{documentation-link "feed-registry/add-a-feed.html#feedurl" "Learn more about GTFS feeds"}}
-		</p>
-	</div>
-	<form {{action "next" on="submit"}}>
-		<div class="input-form-wrapper">
-			{{#if model.errors}}
-					{{#each model.errors as |error|}}
-						<div class="error-tip">
-							<i class="fa fa-exclamation-circle"></i> {{error.message}}
-						</div>
-					{{/each}}
-			{{/if}}
+  <div class="add-operator-info">
+    <p>
+      O TPP junta várias origens de dados de transportes públicos para construir uma <a href="https://tpp.pt/feed-registry" target="_blank">directoria de operadores and fontes</a> que pode ser editada por entusiastas dos transportes públicos e programadores. As suas contribuições podem ajudar a expandir a cobertura do TPP por todo o país.
+    </p>
+    <p>
+      Se sabe de uma fonte, por favor continue abaixo!
+    </p>
+    <p>
+      {{documentation-link "feed-registry/add-a-feed.html#feedurl" "Aprenda mais sobre fontes GTFS"}}
+    </p>
+  </div>
+  <form {{action "next" on="submit"}}>
+    <div class="input-form-wrapper">
+      {{#if model.errors}}
+        {{#each model.errors as |error|}}
+          <div class="error-tip">
+            <i class="fa fa-exclamation-circle"></i> {{error.message}}
+          </div>
+        {{/each}}
+      {{/if}}
 
-			<div class="row {{if model.errors.url "error"}}">
-				<div class="col-sm-12">
-					<div class="input-form-label">
-						{{#if isLoading}}
-							{{progressStatus}}
-						{{else}}
-							Paste the GTFS feed URL
-						{{/if}}
-					</div>
-					<div class="input-form-field">{{input type="text" value=model.url placeholder="http://... .zip" autofocus=true}}</div>
-				</div>
-			</div>
-		</div>
+      <div class="row {{if model.errors.url "error"}}">
+        <div class="col-sm-12">
+          <div class="input-form-label">
+            {{#if isLoading}}
+              {{progressStatus}}
+            {{else}}
+              Introduza o URL da fonte GTFS
+            {{/if}}
+          </div>
+          <div class="input-form-field">{{input type="text" value=model.url placeholder="http://... .zip" autofocus=true}}</div>
+        </div>
+      </div>
+    </div>
 
-		<div class="caption">
-      After this feed is added to TPP, our servers will periodically check this URL for updates.<br/>
-      If you represent a transit agency that is unable to host your own feed file, please follow our <a href="https://github.com/Rui-Santos/gtfs-archives-not-hosted-elsewhere/blob/master/README.md#how-to-submit-a-new-or-updated-feed-archive">instructions to submit your feed via e-mail</a>.<br/>
-      To edit the record for a feed already in the Feed Registry, paste its URL above and press Next.
-		</div>
+    <div class="caption">
+      Após esta fonte ser adicionada ao TPP, os nossos servidores irão verificar periodicamente este URL por atualizações.<br/>
+      Se representa uma operadora de transportes públicos que não pode alojar o seu próprio ficheiro de fontes, por favor siga as nossas <a href="https://github.com/Rui-Santos/gtfs-archives-not-hosted-elsewhere/blob/master/README.md#how-to-submit-a-new-or-updated-feed-archive">instruções para submeter a sua fonte por email</a>.<br/>
+      Para editar o registo de uma fonte já existente no Registo de Fontes, introduza o seu URL acima e clique em Próximo.
+    </div>
 
-		{{#if model.url}}
-			<div class="row direction-btn-wrapper">
-				<div class="col-sm-12">
-					<div class="pull-right">
-					 <a class="btn btn-action" role="button"  type="submit" {{action "next"}}> Next <i class="fa fa-chevron-right"></i></a>
-					</div>
-				</div>
-			</div>
-		{{else}}
-			<div class="row direction-btn-wrapper">
-				<div class="col-sm-12">
-					<div class="pull-right">
-					 <a class="btn btn-action" disabled role="button"  type="submit" {{action "next"}}> Next <i class="fa fa-chevron-right"></i></a>
-					</div>
-				</div>
-			</div>
-		{{/if}}
-	</form>
+    {{#if model.url}}
+      <div class="row direction-btn-wrapper">
+        <div class="col-sm-12">
+          <div class="pull-right">
+            <a class="btn btn-action" role="button"  type="submit" {{action "next"}}> Próximo <i class="fa fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <div class="row direction-btn-wrapper">
+        <div class="col-sm-12">
+          <div class="pull-right">
+            <a class="btn btn-action" disabled role="button"  type="submit" {{action "next"}}> Próximo <i class="fa fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  </form>
 </div>

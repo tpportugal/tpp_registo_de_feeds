@@ -31,7 +31,7 @@ export default Ember.Service.extend({
   },
   createFeedAndUserModels: function() {
     var newFeedModel = this.get('store').createRecord('feed', {});
-		var newUserModel = this.get('store').createRecord('user', {});
+    var newUserModel = this.get('store').createRecord('user', {});
     this.set('feedModel', newFeedModel);
     this.set('userModel', newUserModel);
     return {
@@ -63,15 +63,15 @@ export default Ember.Service.extend({
       action: 'createUpdate',
       feed: feedModel.toChange()
     });
-    console.log("Change payload:");
+    console.log("Conteúdo da modificação:");
     console.log(changes);
     var changeset = this.get('store').createRecord('changeset', {
-      notes: `Changed submitted from Feed Registry for feed at ${feedModel.get('url')}`,
+      notes: `Modificação submetida a partir do Registo de Fontes para a fonte em ${feedModel.get('url')}`,
       payload: {
         changes: changes
       }
     });
-		changeset.set('user', this.get('userModel'));
+    changeset.set('user', this.get('userModel'));
     return changeset;
   }
 });

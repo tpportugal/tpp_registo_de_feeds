@@ -7,8 +7,8 @@ export default Ember.Route.extend({
     }
   },
 
-	createFeedFromGtfsService: Ember.inject.service('create-feed-from-gtfs'),
-	model: function(params) {
+  createFeedFromGtfsService: Ember.inject.service('create-feed-from-gtfs'),
+  model: function(params) {
     var oldModel = this.get('createFeedFromGtfsService').feedModel;
     this.store.unloadAll();
     var newModel = this.get('createFeedFromGtfsService').createFeedAndUserModels().feed;
@@ -26,7 +26,7 @@ export default Ember.Route.extend({
       newModel.set('url', params.feedUrl);
     }
     return newModel;
-	},
+  },
   resetController: function(controller, isExiting, transition) {
     // Reset the controller loading state before transition
     controller.set('isLoading', false);

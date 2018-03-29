@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'tr', 
-  
+  tagName: 'tr',
+
 
   requiresAttribution: function(){
     return this.get('operator.feeds.firstObject.license_use_without_attribution') === 'no';
@@ -15,7 +15,7 @@ export default Ember.Component.extend({
   }.property('operator.feeds.firstObject.license_use_without_attribution'),
 
   derivationAllowed: function(){
-  	return this.get('operator.feeds.firstObject.license_create_derived_product') === 'yes';
+    return this.get('operator.feeds.firstObject.license_create_derived_product') === 'yes';
   }.property('operator.feeds.firstObject.license_create_derived_product'),
   derivationNotAllowed: function(){
     return this.get('operator.feeds.firstObject.license_create_derived_product') === 'no';
@@ -26,7 +26,7 @@ export default Ember.Component.extend({
 
 
   redistributionAllowed: function(){
-  	return this.get('operator.feeds.firstObject.license_redistribute') === 'yes';
+    return this.get('operator.feeds.firstObject.license_redistribute') === 'yes';
   }.property('operator.feeds.firstObject.license_redistribute'),
   redistributionNotAllowed: function(){
     return this.get('operator.feeds.firstObject.license_redistribute') === 'no';
@@ -34,5 +34,5 @@ export default Ember.Component.extend({
   redistributionUnknown: function(){
     return this.get('operator.feeds.firstObject.license_redistribute') === 'unknown';
   }.property('operator.feeds.firstObject.license_redistribute')
-  
+
 });

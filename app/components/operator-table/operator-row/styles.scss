@@ -50,6 +50,7 @@
         }
         &:after {
           content: 'When using, be sure to credit the transit agency. Check license for exact requirements.';
+          content: 'Ao utilizar, certifique-se de creditar o operador/agência. Verifique a licença para saber exatamente como o fazer.';
           @extend .tooltip;
         }
       }
@@ -61,7 +62,7 @@
           @extend .tooltip-point;
         }
         &:after {
-         content: 'When using, it is optional to credit the transit agency.';
+         content: 'Ao utilizar, é opcional creditar o operador/agência.';
           @extend .tooltip;
         }
       }
@@ -73,7 +74,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Unknown whether agency requires attribution.';
+          content: 'Desconhecemos se a licença requer atribuição.';
           @extend .tooltip;
         }
       }
@@ -85,7 +86,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'You may create a derived data product from this feed.';
+          content: 'Pode criar um produto derivado dos dados desta fonte.';
           @extend .tooltip;
         }
       }
@@ -97,7 +98,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'You may NOT create a derived data product from this feed.';
+          content: 'NÃO pode criar um produto derivado dos dados desta fonte.';
           @extend .tooltip;
         }
       }
@@ -109,7 +110,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Unknown whether agency allows you to create derived data products from this feed.';
+          content: 'Desconhecemos se o operador/agência lhe permite criar um produto derivado dos dados desta fonte.';
           @extend .tooltip;
         }
       }
@@ -122,7 +123,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'You may redistribute this feed.';
+          content: 'Pode redistribuir esta fonte.';
           @extend .tooltip;
         }
       }
@@ -134,7 +135,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'You may NOT redistribute this feed. Check license for exceptions.';
+          content: 'NÃO pode redistribuir esta fonte. Verifique a licença por excepções.';
           @extend .tooltip;
         }
       }
@@ -146,7 +147,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Unknown whether agency allows you to redistribute this feed.';
+          content: 'Desconhecemos se o operador/agência lhe permite redistribuir esta fonte.';
           @extend .tooltip;
         }
       }

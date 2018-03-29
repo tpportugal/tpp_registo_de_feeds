@@ -1,29 +1,29 @@
 .input-form {
-	background-color: #ffffff;
-	.input-form-label{
-		color: $logo-color-3;
-		padding: 0px 0px 3px 5px;
-	}
-	.ember-text-field{
-		color: #333333;
-		font-weight: normal;
-		border: 0;
-		padding: 0px 0px 3px 5px;
-		width: 100%;
-	}
+  background-color: #ffffff;
+  .input-form-label{
+    color: $logo-color-3;
+    padding: 0px 0px 3px 5px;
+  }
+  .ember-text-field{
+    color: #333333;
+    font-weight: normal;
+    border: 0;
+    padding: 0px 0px 3px 5px;
+    width: 100%;
+  }
 
-	.input-form-guide{
-		color: $grey-color;
-		background: $grey-color-light;
-		text-align: center;
-		padding: 0px 0px 3px 5px;
-	}
+  .input-form-guide{
+    color: $grey-color;
+    background: $grey-color-light;
+    text-align: center;
+    padding: 0px 0px 3px 5px;
+  }
 }
 
 .ember-power-select-trigger{
-	color: #333333;
-	//default power select's line-height makes div's height change depending on the content
-	line-height: inherit;
-	box-sizing: border-box;
+  color: #333333;
+  //default power select's line-height makes div's height change depending on the content
+  line-height: inherit;
+  box-sizing: border-box;
 }
 

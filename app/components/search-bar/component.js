@@ -17,7 +17,7 @@ export default Ember.Component.extend({
           placesAndNames.push({
             value: isocode,
             display: iso31662.country(isocode).name,
-            type: 'country'
+            type: 'país'
           });
         }
       });
@@ -26,7 +26,7 @@ export default Ember.Component.extend({
           placesAndNames.push({
             value: isocode,
             display: iso31662.subdivision(isocode).name,
-            type: 'state'
+            type: 'distrito/região'
           });
         }
       });
@@ -35,7 +35,7 @@ export default Ember.Component.extend({
           placesAndNames.push({
             value: metro,
             display: metro,
-            type: 'metro'
+            type: 'concelho'
           });
         }
       });
@@ -44,7 +44,7 @@ export default Ember.Component.extend({
           placesAndNames.push({
             value: name,
             display: name,
-            type: 'name'
+            type: 'nome'
           });
         }
       });
@@ -53,7 +53,7 @@ export default Ember.Component.extend({
           placesAndNames.push({
             value: shortName,
             display: shortName,
-            type: 'short_name'
+            type: 'sigla/acrónimo'
           });
         }
       });

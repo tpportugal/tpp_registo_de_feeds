@@ -11,6 +11,6 @@ export default Ember.Component.extend({
   feedImportLevelTwo: Ember.computed.gte('importLevel', 2),
   feedImportLevelFour: Ember.computed.gte('importLevel', 4),
   supportedImportLevel: Ember.computed('importLevel', function() {
-		return (this.get('importLevel') >= 0 && this.get('importLevel') <= 4);
-	})
+    return (this.get('importLevel') >= 0 && this.get('importLevel') <= 4);
+  })
 });

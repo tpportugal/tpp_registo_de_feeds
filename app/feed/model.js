@@ -90,5 +90,4 @@ var Feed = DS.Model.extend({
   }
 });
 
-
 export default Feed;

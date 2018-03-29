@@ -2,25 +2,25 @@
   {{#if queryParamExists}}
     <div class="breadcrumb">
         {{#link-to "index" (query-params import_level="null" country="null" state="null" metro="null" name="null" short_name="null" offset=0)}}
-          {{fa-icon icon="fa-caret-left"}} View All Operators
+          {{fa-icon icon="fa-caret-left"}} Ver Todos os Operadores
         {{/link-to}}
     </div>
   {{/if}}
   <table class="table table-striped">
     <thead>
       <tr>
-        <th class = "{{nameSortClass}}" {{action "changeSort" "name"}}>Operator Name</th>
-        <th class = "{{regionSortClass}}" {{action "changeSort" "metro"}}>Metro</th>
-        <th class = "{{stateSortClass}}" {{action "changeSort" "state"}}>State or Province</th>
-        <th class = "{{countrySortClass}}" {{action "changeSort" "country"}}>Country</th>
-        <th class = "license">License</th>
-        <th>License Details <a href = "https://tpp.pt/an-open-project/#aggregated-data" target = "_blank">{{fa-icon icon="question-circle"}}</a></th>
+        <th class = "{{nameSortClass}}" {{action "changeSort" "name"}}>Nome do Operador</th>
+        <th class = "{{regionSortClass}}" {{action "changeSort" "metro"}}>Concelho</th>
+        <th class = "{{stateSortClass}}" {{action "changeSort" "state"}}>Distrito ou Região</th>
+        <th class = "{{countrySortClass}}" {{action "changeSort" "country"}}>País</th>
+        <th class = "license">Licença</th>
+        <th>Detalhes da Licença<a href = "https://tpp.pt/an-open-project/#aggregated-data" target = "_blank">{{fa-icon icon="question-circle"}}</a></th>
       </tr>
     </thead>
     <tbody>
-      {{#each operator in operators}}
-    	     {{operator-table/operator-row operator=operator}}
-    	{{/each}}
+      {{#each operators as |operator|}}
+        {{operator-table/operator-row operator=operator}}
+      {{/each}}
     </tbody>
   </table>
 </div>

@@ -1,11 +1,11 @@
-<h4 class="detail">Feed Detail</h4>
+<h4 class="detail">Detalhes da Fonte</h4>
 <table class="operator-table">
   <tr>
-    <td>Onestop ID <a href="https://tpp.pt/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
+    <td>ID Onestop <a href="https://tpp.pt/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
     <td>{{feed.onestop_id}}</td>
   </tr>
   <tr>
-    <td>Format</td>
+    <td>Formato</td>
     <td>{{feed.feed_format}}</td>
   </tr>
   <tr>
@@ -22,50 +22,50 @@
     </td>
   </tr>
   <tr>
-    <td>License</td>
+    <td>Licença</td>
     <td>
       {{#if feed.license_url}}
       <a href="{{feed.license_url}}" target="_blank">
-					{{#if feed.license_name}}
-						{{feed.license_name}}
-					{{else}}
-						{{fa-icon icon="fa-external-link"}}
-					{{/if}}
-				</a> {{else}} {{fa-icon icon="fa-question"}} {{/if}}
+          {{#if feed.license_name}}
+            {{feed.license_name}}
+          {{else}}
+            {{fa-icon icon="fa-external-link"}}
+          {{/if}}
+        </a> {{else}} {{fa-icon icon="fa-question"}} {{/if}}
     </td>
   </tr>
   <tr>
-    <td>Attribution optional</td>
+    <td>Atribuição opcional</td>
     <td>{{feed.license_use_without_attribution}}</td>
   </tr>
 
   {{#if feed.license_attribution_text}}
   <tr>
-    <td>Attribution text<i class="question-circle attribution-text-tooltip"></i></td>
+    <td>Texto de atribuição <i class="question-circle attribution-text-tooltip"></i></td>
     <td>{{feed.license_attribution_text}}</td>
   </tr>
   {{/if}}
 
   <tr>
-    <td>Derivation allowed</td>
+    <td>Derivativos permitidos</td>
     <td>{{feed.license_create_derived_product}}</td>
   </tr>
   <tr>
-    <td>Redistribution allowed</td>
+    <td>Redistribuição permitida</td>
     <td>{{feed.license_redistribute}}</td>
   </tr>
   <tr>
-    <td>Fetched from URL</td>
+    <td>URL de origem</td>
     <td><a href="{{feed.url}}" target="_blank">{{feed.url}}</a></td>
   </tr>
   <tr>
-    <td>Feed last fetched at</td>
+    <td>Última verificação em</td>
     <td>{{format-date feed.last_fetched_at}}</td>
   </tr>
 
   {{#if feedImportLevelZero}}
     <tr>
-      <td>Feed bounding box</td>
+      <td>Área geográfica da fonte</td>
       <td>
         <ul>
           {{#if feedImportLevelOne}}
@@ -77,42 +77,42 @@
     </tr>
   {{/if}}
   <tr>
-    <td>More information about feed in TPP</td>
+    <td>Mais informações da fonte em TPP</td>
     <td>
       <ul>
-        <li><a href="/dispatcher/feeds/{{feed.onestop_id}}">View statistics and validation reports in TPP Dispatcher</a></li>
-        <li>{{json-endpoint feed.onestop_id "" "JSON from TPP Datastore API"}}</li>
+        <li><a href="/dispatcher/feeds/{{feed.onestop_id}}">Ver estatísticas e relatórios de validação no Expedidor TPP</a></li>
+        <li>{{json-endpoint feed.onestop_id "" "JSON da API do Banco de Dados TPP"}}</li>
       </ul>
     </td>
   </tr>
   <tr>
-    <td>Feed versions</td>
+    <td>Versões da Fonte</td>
     <td>
       {{#if showArchivedFeedVersions}}
         {{#each feed.feed_versions as |fv|}}
           <ul class="list-unstyled">
-            <li>Fetched: {{time-since-with-mouseover fv.fetched_at}}</li>
-            <li>Earliest calendar date: {{moment-format fv.earliest_calendar_date 'MMMM, D YYYY'}}</li>
-            <li>Latest calendar date: {{moment-format fv.latest_calendar_date 'MMMM, D YYYY'}}</li>
-            <li>Download a copy: <a href="{{fv.download_url}}">{{fa-icon icon="download"}}</a></li>
+            <li>Atualizada: {{time-since-with-mouseover fv.fetched_at}}</li>
+            <li>Primeira data no calendário: {{moment-format fv.earliest_calendar_date 'LL'}}</li>
+            <li>Última data no calendário: {{moment-format fv.latest_calendar_date 'LL'}}</li>
+            <li>Baixe uma cópia: <a href="{{fv.download_url}}">{{fa-icon icon="download"}}</a></li>
             {{#if fv.feedvalidator_url}}
-              <li>View Google FeedValidator report: <a href="{{fv.feedvalidator_url}}" target="_blank">{{fa-icon icon="fa-external-link"}}</a></li>
+              <li>Veja o relatório do Google FeedValidator: <a href="{{fv.feedvalidator_url}}" target="_blank">{{fa-icon icon="fa-external-link"}}</a></li>
             {{/if}}
             {{#if fv.is_active_feed_version}}
-              <li><em>This is the active feed version in the TPP Datastore.</em></li>
+              <li><em>Esta é a versão da fonte ativa no Banco de Dados TPP.</em></li>
             {{/if}}
             <hr>
           </ul>
         {{/each}}
-        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Hide feed versions</button>
+        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Ocultar versões da fonte</button>
       {{else}}
-        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Show all available feed versions</button>
+        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Mostrar versões da fonte</button>
       {{/if}}
     </td>
   </tr>
 </table>
 
 <div class="row direction-btn-wrapper pull-right">
-  {{#link-to 'feeds.new' (query-params feedUrl=feed.url) class="btn btn-action" role="button"}} Edit feed and operator details
+  {{#link-to 'feeds.new' (query-params feedUrl=feed.url) class="btn btn-action" role="button"}} Editar fonte e detalhes do operador
   {{/link-to}}
 </div>
