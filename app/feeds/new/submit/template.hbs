@@ -1,5 +1,5 @@
 <div class="fullvw-wrapper">
-  {{add-feed-tabs header-text="ADICIONAR UMA FONTE GTFS" upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab current" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UMA FEED GTFS" upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab current" submitted=false}}
 </div>
 
 <div class="container">
@@ -8,24 +8,24 @@
       <h4>Conte-nos um pouco sobre si</h4>
     </p>
     <p>
-      Todos os campos são opcionais, mas assegure-se que inclui o seu endereço de email se desejar que o contactemos quando a sua fonte for adicionada ao Registo de Fontes TPP.
+      Todos os campos são opcionais, mas assegure-se que inclui o seu endereço de email se desejar que o contactemos quando a sua feed for adicionada ao Registo de Feeds TPP.
     </p>
   </div>
 
   <div class="input-form-wrapper">
     <div class="row">
       <div class="col-sm-6">
-        <div class="input-form-label">Name</div>
+        <div class="input-form-label">Nome</div>
         <div class="input-form-field">{{input type="text" value=model.user.name placeholder="p.ex., Teresa Gomes" autofocus=true}}</div>
       </div>
       <div class="col-sm-6">
-        <div class="input-form-label">Email address</div>
+        <div class="input-form-label">Endereço de email</div>
         <div class="input-form-field">{{input type="text" value=model.user.email placeholder="p.ex., api@tpp.pt"}}</div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-6">
-        <div class="input-form-label">Which best describes you?</div>
+        <div class="input-form-label">O que melhor o descreve?</div>
         <div class="input-form-field">
           {{#power-select options=userTypes searchField="display" selected=model.user.user_type onchange=(action (mut model.user.user_type)) onfocus=(action "handleFocus") as |userType|}}
             {{underscored-string-to-title-case userType}}
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <div class="input-form-label">Affiliation, if any</div>
+        <div class="input-form-label">Afiliação, se alguma</div>
         <div class="input-form-field">{{input type="text" value=model.user.affiliation placeholder="p.ex., Transporlis"}}</div>
       </div>
     </div>
@@ -41,22 +41,22 @@
   <div class="row direction-btn-wrapper">
     <div class="col-sm-12">
       {{#link-to "feeds.new.license" class="btn btn-action pull-left" role="button" }}
-        <i class="fa fa-chevron-left"></i> back
+        <i class="fa fa-chevron-left"></i> anterior
       {{/link-to}}
           <div class="term-agreement pull-right">
             {{#if agreeToTerms}}
               <div class="instruction">
                 <input type="checkbox" {{action 'agree'}} checked value="">
-                Ao submeter uma fonte, eu concordo com o <a href="https://tpp.pt/an-open-project/contributor-agreement.html" target="_blank"> acordo de contribuidor <i class="fa fa-external-link"></i></a> do TPP.
+                Ao submeter uma feed, eu concordo com o <a href="https://tpp.pt/an-open-project/contributor-agreement.html" target="_blank"> acordo de contribuidor <i class="fa fa-external-link"></i></a> do TPP.
               </div>
             {{else}}
               <div class="instruction">
                 <input type="checkbox" {{action 'agree'}} value="">
-                Ao submeter uma fonte, eu concordo com o <a href="https://tpp.pt/an-open-project/contributor-agreement.html" target="_blank"> acordo de contribuidor <i class="fa fa-external-link"></i></a> do TPP.
+                Ao submeter uma feed, eu concordo com o <a href="https://tpp.pt/an-open-project/contributor-agreement.html" target="_blank"> acordo de contribuidor <i class="fa fa-external-link"></i></a> do TPP.
               </div>
             {{/if}}
             {{#if agreeToTerms}}
-              <input type="button" {{action 'submit'}} class="btn btn-action pull-right" value="SUBMETER FONTE">
+              <input type="button" {{action 'submit'}} class="btn btn-action pull-right" value="SUBMETER FEED">
             {{else}}
               <input type="button" {{action 'submit'}} class="btn btn-action pull-right" disabled value="SUBMETER FEED">
             {{/if}}

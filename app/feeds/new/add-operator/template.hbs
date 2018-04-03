@@ -1,11 +1,11 @@
 <div class="fullvw-wrapper">
-  {{add-feed-tabs header-text="ADICIONAR UMA FONTE GTFS" upload-tab-class="tab" add-operator-tab-class="tab current" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UMA FEED GTFS" upload-tab-class="tab" add-operator-tab-class="tab current" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
 </div>
 
 <div class="container">
   <div class="add-operator-info">
     <p>
-      O TPP verificou a sua fonte e encontrou {{model.operators.length}} {{#if singleOperator}}operador{{else}}operadores{{/if}}. Reveja a informação abaixo e providencie detalhes adicionais sobre cada operador de transportes públicos e a sua área de serviço.
+      O TPP verificou a sua feed e encontrou {{model.operators.length}} {{#if singleOperator}}operador{{else}}operadores{{/if}}. Reveja a informação abaixo e providencie detalhes adicionais sobre {{model.operators.length}} {{#if singleOperator}}o operador{{else}}cada um dos operadores{{/if}} de transportes públicos e {{model.operators.length}} {{#if singleOperator}}a sua área{{else}}as suas áreas{{/if}} de serviço.
     </p>
     <p>
       {{documentation-link "feed-registry/add-a-feed.html#operators" "Aprenda mais sobre operadores de transportes públicos"}}

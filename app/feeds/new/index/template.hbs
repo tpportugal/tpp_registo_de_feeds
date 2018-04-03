@@ -3,18 +3,18 @@
 {{/if}}
 
 <div class="fullvw-wrapper">
-  {{add-feed-tabs header-text="ADICIONAR UMA FONTE GFTS" upload-tab-class="tab current" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UMA FEED GFTS" upload-tab-class="tab current" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
 </div>
 <div class="container">
   <div class="add-operator-info">
     <p>
-      O TPP junta várias origens de dados de transportes públicos para construir uma <a href="https://tpp.pt/feed-registry" target="_blank">directoria de operadores and fontes</a> que pode ser editada por entusiastas dos transportes públicos e programadores. As suas contribuições podem ajudar a expandir a cobertura do TPP por todo o país.
+      O TPP junta várias origens de dados de transportes públicos para construir uma <a href="https://tpp.pt/feed-registry" target="_blank">directoria de operadores e feeds</a> que pode ser editada por entusiastas dos transportes públicos e programadores. As suas contribuições podem ajudar a expandir a cobertura do TPP por todo o país.
     </p>
     <p>
-      Se sabe de uma fonte, por favor continue abaixo!
+      Se tem conhecimento de uma feed GTFS, por favor continue abaixo!
     </p>
     <p>
-      {{documentation-link "feed-registry/add-a-feed.html#feedurl" "Aprenda mais sobre fontes GTFS"}}
+      {{documentation-link "feed-registry/add-a-feed.html#feedurl" "Aprenda mais sobre feeds GTFS"}}
     </p>
   </div>
   <form {{action "next" on="submit"}}>
@@ -33,7 +33,7 @@
             {{#if isLoading}}
               {{progressStatus}}
             {{else}}
-              Introduza o URL da fonte GTFS
+              Introduza o URL da feed GTFS
             {{/if}}
           </div>
           <div class="input-form-field">{{input type="text" value=model.url placeholder="http://... .zip" autofocus=true}}</div>
@@ -42,9 +42,9 @@
     </div>
 
     <div class="caption">
-      Após esta fonte ser adicionada ao TPP, os nossos servidores irão verificar periodicamente este URL por atualizações.<br/>
-      Se representa uma operadora de transportes públicos que não pode alojar o seu próprio ficheiro de fontes, por favor siga as nossas <a href="https://github.com/Rui-Santos/gtfs-archives-not-hosted-elsewhere/blob/master/README.md#how-to-submit-a-new-or-updated-feed-archive">instruções para submeter a sua fonte por email</a>.<br/>
-      Para editar o registo de uma fonte já existente no Registo de Fontes, introduza o seu URL acima e clique em Próximo.
+      Após esta feed ser adicionada ao TPP, os nossos servidores irão verificar periodicamente este URL por atualizações.<br/>
+      Se representa uma operadora de transportes públicos que não pode alojar o seu próprio ficheiro GTFS, por favor siga as nossas <a href="https://github.com/Rui-Santos/gtfs-archives-not-hosted-elsewhere/blob/master/README.md#how-to-submit-a-new-or-updated-feed-archive">instruções para submeter a sua feed por email</a>.<br/>
+      Para editar o registo de uma feed já existente no Registo de Feeds, introduza o seu URL acima e clique em Próximo.
     </div>
 
     {{#if model.url}}

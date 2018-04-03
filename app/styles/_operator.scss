@@ -82,7 +82,7 @@
         @extend .tooltip-point;
       }
       &.onestop-id-tooltip:after {
-        content: 'IDs Onestop são identificadores globais únicos para fontes de transportes públicos, operadores, rotas e paragens. Utilize-os para questionar a API TPP ou nas suas próprias aplicações e análises.';
+        content: 'IDs Onestop são identificadores globais únicos para feeds de transportes públicos, operadores, rotas e paragens. Utilize-os para questionar a API TPP ou nas suas próprias aplicações e análises.';
 
         @extend .tooltip;
       }
@@ -95,7 +95,7 @@
         @extend .tooltip;
       }
       &.attribution-text-tooltip:after {
-        content: "A licença desta fonte requer que inclua este texto onde quer que utilize os seus dados.";
+        content: "A licença desta feed requer que inclua este texto onde quer que utilize os seus dados.";
         @extend .tooltip;
       }
     }

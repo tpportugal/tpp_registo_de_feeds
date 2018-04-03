@@ -1,11 +1,11 @@
 <div class="fullvw-wrapper">
-  {{add-feed-tabs header-text="ADICIONAR UMA FONTE GTFS" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UMA FEED GTFS" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
 </div>
 
 <div class="container">
   <div class="add-operator-info">
     <p>
-      Muitas fontes têm licenças ou termos legais que se lhes aplicam. Providencie o máximo de informação que conseguir acerca da licença para esta fonte. Não há problema se não conseguir responder a todas as perguntas sobre a licença.
+      Muitas feeds têm licenças ou termos legais que se lhes aplicam. Providencie o máximo de informação que conseguir acerca da licença para esta feed. Não há problema se não conseguir responder a todas as perguntas sobre a licença.
     </p>
     <p>
       {{documentation-link "feed-registry/add-a-feed.html#license" "Aprenda mais sobre licenças"}}
@@ -17,7 +17,7 @@
   <div class="input-form-wrapper">
     <div class="row inline-items {{if license_present_mode "sim"}}{{unless license_present_mode "não"}}">
       <div class="col-sm-4 inline-label">
-        <div class="input-form-label">Esta fonte tem uma licença?</div>
+        <div class="input-form-label">Esta feed tem uma licença?</div>
       </div>
       <div class="col-sm-8">
         <div class="btn-group" {{action "click"}}>
@@ -39,7 +39,7 @@
       </div>
       <div class="row inline-items {{if interpret_license_mode "sim"}}{{unless interpret_license_mode "não"}}">
         <div class="col-sm-6 inline-label">
-          <div class="input-form-label">Sente-se confortável para interpretar a licença?</div>
+          <div class="input-form-label">Sente-se confortável a interpretar a licença?</div>
         </div>
         <div class="col-sm-6">
           <div class="btn-group" data-toggle="buttons" {{action "click"}}>
@@ -76,13 +76,13 @@
           </div>
           <div class="col-sm-8">
             <div class="btn-group" data-toggle="buttons">
-              {{license-form-toggle-button attr=model.license_create_derived_product text="Sim" value="sim"}} {{license-form-toggle-button attr=model.license_create_derived_product text="No" value="não"}} {{license-form-toggle-button attr=model.license_create_derived_product text="Desconhecido" value="desconhecido"}}
+              {{license-form-toggle-button attr=model.license_create_derived_product text="Sim" value="sim"}} {{license-form-toggle-button attr=model.license_create_derived_product text="Não" value="não"}} {{license-form-toggle-button attr=model.license_create_derived_product text="Desconhecido" value="desconhecido"}}
             </div>
           </div>
         </div>
         <div class="row inline-items">
           <div class="col-sm-4 col-xs-12 inline-label">
-            <div class="input-form-label">redistribuição da fonte completa?</div>
+            <div class="input-form-label">redistribuição da feed completa?</div>
           </div>
           <div class="col-sm-8 col-xs-12 input-section">
             <div class="btn-group" data-toggle="buttons">

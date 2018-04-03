@@ -18,8 +18,8 @@
   position: absolute;
   top: 30px;
   left: 0px;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #bbb;
@@ -86,7 +86,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Pode criar um produto derivado dos dados desta fonte.';
+          content: 'Pode criar um produto derivado dos dados desta feed.';
           @extend .tooltip;
         }
       }
@@ -98,7 +98,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'NÃO pode criar um produto derivado dos dados desta fonte.';
+          content: 'NÃO pode criar um produto derivado dos dados desta feed.';
           @extend .tooltip;
         }
       }
@@ -110,7 +110,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Desconhecemos se o operador/agência lhe permite criar um produto derivado dos dados desta fonte.';
+          content: 'Desconhecemos se o operador/agência lhe permite criar um produto derivado dos dados desta feed.';
           @extend .tooltip;
         }
       }
@@ -123,7 +123,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Pode redistribuir esta fonte.';
+          content: 'Pode redistribuir esta feed.';
           @extend .tooltip;
         }
       }
@@ -135,7 +135,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'NÃO pode redistribuir esta fonte. Verifique a licença por excepções.';
+          content: 'NÃO pode redistribuir esta feed. Verifique a licença por excepções.';
           @extend .tooltip;
         }
       }
@@ -147,7 +147,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Desconhecemos se o operador/agência lhe permite redistribuir esta fonte.';
+          content: 'Desconhecemos se o operador/agência lhe permite redistribuir esta feed.';
           @extend .tooltip;
         }
       }

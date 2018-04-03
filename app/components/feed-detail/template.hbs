@@ -1,4 +1,4 @@
-<h4 class="detail">Detalhes da Fonte</h4>
+<h4 class="detail">Detalhes da Feed</h4>
 <table class="operator-table">
   <tr>
     <td>ID Onestop <a href="https://tpp.pt/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
@@ -65,7 +65,7 @@
 
   {{#if feedImportLevelZero}}
     <tr>
-      <td>Área geográfica da fonte</td>
+      <td>Área geográfica da feed</td>
       <td>
         <ul>
           {{#if feedImportLevelOne}}
@@ -77,7 +77,7 @@
     </tr>
   {{/if}}
   <tr>
-    <td>Mais informações da fonte em TPP</td>
+    <td>Mais informações da feed em TPP</td>
     <td>
       <ul>
         <li><a href="/dispatcher/feeds/{{feed.onestop_id}}">Ver estatísticas e relatórios de validação no Expedidor TPP</a></li>
@@ -86,7 +86,7 @@
     </td>
   </tr>
   <tr>
-    <td>Versões da Fonte</td>
+    <td>Versões da Feed</td>
     <td>
       {{#if showArchivedFeedVersions}}
         {{#each feed.feed_versions as |fv|}}
@@ -99,20 +99,20 @@
               <li>Veja o relatório do Google FeedValidator: <a href="{{fv.feedvalidator_url}}" target="_blank">{{fa-icon icon="fa-external-link"}}</a></li>
             {{/if}}
             {{#if fv.is_active_feed_version}}
-              <li><em>Esta é a versão da fonte ativa no Banco de Dados TPP.</em></li>
+              <li><em>Esta é a versão da feed ativa no Banco de Dados TPP.</em></li>
             {{/if}}
             <hr>
           </ul>
         {{/each}}
-        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Ocultar versões da fonte</button>
+        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Ocultar versões da feed</button>
       {{else}}
-        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Mostrar versões da fonte</button>
+        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Mostrar versões da feed</button>
       {{/if}}
     </td>
   </tr>
 </table>
 
 <div class="row direction-btn-wrapper pull-right">
-  {{#link-to 'feeds.new' (query-params feedUrl=feed.url) class="btn btn-action" role="button"}} Editar fonte e detalhes do operador
+  {{#link-to 'feeds.new' (query-params feedUrl=feed.url) class="btn btn-action" role="button"}} Editar feed e detalhes do operador
   {{/link-to}}
 </div>
