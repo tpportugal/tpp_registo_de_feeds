@@ -16,7 +16,6 @@ module.exports = function(environment) {
     moment: {
       includeLocales: ['pt']
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -67,7 +66,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.datastoreHost = 'https://tppgeo.cf';
+    ENV.datastoreHost = 'https://tpp.pt';
     ENV.baseURL = '/feed-registry';
     ENV.apiProxyKey= 'tpp-_ngAKUs';
   }
