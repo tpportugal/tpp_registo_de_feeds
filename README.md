@@ -25,7 +25,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone https://github.com/tpportugal/tpp_registo_de_feeds.git`
-* change into the new directory
+* `cd tpp_registo_de_feeds`
 * `npm install`
 * `bower install`
 
