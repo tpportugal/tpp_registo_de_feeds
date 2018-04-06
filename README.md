@@ -1,5 +1,7 @@
 # Feed Registry
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/07fad0d5489b4ecc8bfd13686ad0a08b)](https://app.codacy.com/app/TPP/tpp_registo_de_feeds?utm_source=github.com&utm_medium=referral&utm_content=tpportugal/tpp_registo_de_feeds&utm_campaign=badger)
+
 The TPP Feed Registry is a directory of public-transit operators and their authoriative data feeds. The directory is a view into TPP's Datastore API; it lets users browse operators and their feeds, as well as view the license restrictions on each feed. The Feed Registry also lets users contribute additional operators and feeds.
 
 * [Browse the Feed Registry](https://tpp.pt/feed-registry/)
