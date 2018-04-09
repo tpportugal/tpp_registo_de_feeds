@@ -12,7 +12,7 @@ export default Ember.Route.extend({
     var fetch_info_url = adapter.urlPrefix()+'/feeds/fetch_info';
     var promise = adapter.ajax(fetch_info_url, 'post', {data:{url:url}});
     promise.then(function(response) {
-      if (response.status === 'complete') {
+      if (response.status === 'completo') {
         if ((response.warnings).length >= 1){
           feedsController.set('feedExists', true);
         } else if ((response.warnings).length === 0){
