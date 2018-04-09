@@ -8,13 +8,13 @@
 <div class="container">
   <div class="add-operator-info">
     <p>
-      O TPP junta várias origens de dados de transportes públicos para construir uma <a href="https://tpp.pt/feed-registry" target="_blank">directoria de operadores e feeds</a> que pode ser editada por entusiastas dos transportes públicos e programadores. As suas contribuições podem ajudar a expandir a cobertura do TPP por todo o país.
+      O TPP junta várias origens de dados de transportes públicos para construir uma <a href="https://tpp.pt/registo-de-feeds" target="_blank">directoria de operadores e feeds</a> que pode ser editada por entusiastas dos transportes públicos e programadores. As suas contribuições podem ajudar a expandir a cobertura do TPP por todo o país.
     </p>
     <p>
       Se tem conhecimento de uma feed GTFS, por favor continue abaixo!
     </p>
     <p>
-      {{documentation-link "feed-registry/add-a-feed.html#feedurl" "Aprenda mais sobre feeds GTFS"}}
+      {{documentation-link "registo-de-feeds/adicionar-uma-feed.html#feedurl" "Aprenda mais sobre feeds GTFS"}}
     </p>
   </div>
   <form {{action "next" on="submit"}}>
@@ -44,14 +44,14 @@
     <div class="caption">
       Após esta feed ser adicionada ao TPP, os nossos servidores irão verificar periodicamente este URL por atualizações.<br/>
       Se representa uma operadora de transportes públicos que não pode alojar o seu próprio ficheiro GTFS, por favor siga as nossas <a href="https://github.com/tpportugal/ficheiros_gtfs_sem_hospedeiro#como-submeter-um-ficheiro-gtfs-novo-ou-atualizado">instruções para submeter a sua feed por email</a>.<br/>
-      Para editar o registo de uma feed já existente no Registo de Feeds, introduza o seu URL acima e clique em Próximo.
+      Para editar o registo de uma feed já existente no Registo de Feeds, introduza o seu URL acima e clique em Seguinte.
     </div>
 
     {{#if model.url}}
       <div class="row direction-btn-wrapper">
         <div class="col-sm-12">
           <div class="pull-right">
-            <a class="btn btn-action" role="button"  type="submit" {{action "next"}}> Próximo <i class="fa fa-chevron-right"></i></a>
+            <a class="btn btn-action" role="button"  type="submit" {{action "next"}}> Seguinte <i class="fa fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
       <div class="row direction-btn-wrapper">
         <div class="col-sm-12">
           <div class="pull-right">
-            <a class="btn btn-action" disabled role="button"  type="submit" {{action "next"}}> Próximo <i class="fa fa-chevron-right"></i></a>
+            <a class="btn btn-action" disabled role="button"  type="submit" {{action "next"}}> Seguinte <i class="fa fa-chevron-right"></i></a>
           </div>
         </div>
       </div>

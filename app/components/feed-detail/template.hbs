@@ -1,7 +1,7 @@
 <h4 class="detail">Detalhes da Feed</h4>
 <table class="operator-table">
   <tr>
-    <td>ID Onestop <a href="https://tpp.pt/documentation/onestop-id-scheme/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
+    <td>ID Onestop <a href="https://tpp.pt/documentação/esquema-onestop-id/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
     <td>{{feed.onestop_id}}</td>
   </tr>
   <tr>
@@ -80,7 +80,7 @@
     <td>Mais informações da feed em TPP</td>
     <td>
       <ul>
-        <li><a href="/dispatcher/feeds/{{feed.onestop_id}}">Ver estatísticas e relatórios de validação no Expedidor TPP</a></li>
+        <li><a href="/expedidor/feeds/{{feed.onestop_id}}">Ver estatísticas e relatórios de validação no Expedidor TPP</a></li>
         <li>{{json-endpoint feed.onestop_id "" "JSON da API do Banco de Dados TPP"}}</li>
       </ul>
     </td>
@@ -99,7 +99,7 @@
               <li>Veja o relatório do Google FeedValidator: <a href="{{fv.feedvalidator_url}}" target="_blank">{{fa-icon icon="fa-external-link"}}</a></li>
             {{/if}}
             {{#if fv.is_active_feed_version}}
-              <li><em>Esta é a versão da feed ativa no Banco de Dados TPP.</em></li>
+              <li><em>Esta é a versão de feed ativa no Banco de Dados TPP.</em></li>
             {{/if}}
             <hr>
           </ul>

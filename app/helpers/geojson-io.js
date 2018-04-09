@@ -15,17 +15,17 @@ export default Ember.Handlebars.registerBoundHelper('geojson-io',function(param,
 
   if (attr === "routes") {
     var routes = encodeURIComponent('routes.geojson?operated_by=');
-    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + routes + param +'&per_page=false" target = "_blank">Ver como um mapa utilizando geojson.io</a>');
+    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + routes + param +'&per_page=false" target = "_blank">Ver como um mapa em geojson.io</a>');
   } else if (attr === "stops") {
     var stops = encodeURIComponent('stops.geojson?served_by=');
-    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + stops + param +'&per_page=false" target = "_blank">Ver como um mapa utilizando geojson.io</a>');
+    return new Ember.Handlebars.SafeString('<a href ="' + baseURL + stops + param +'&per_page=false" target = "_blank">Ver como um mapa em geojson.io</a>');
   } else {
     if (param.charAt(1) === '-'){
-      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + entity + param +'.geojson" target = "_blank">Ver como um mapa utilizando geojson.io</a>');
+      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + entity + param +'.geojson" target = "_blank">Ver como um mapa em geojson.io</a>');
     } else if (param.charAt(0) === '/') {
-      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + param + '.geojson" target = "_blank">Ver como um mapa utilizando geojson.io</a>');
+      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + param + '.geojson" target = "_blank">Ver como um mapa em geojson.io</a>');
     } else {
-      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + param + '.geojson" target = "_blank">Ver como um mapa utilizando geojson.io</a>');
+      return new Ember.Handlebars.SafeString('<a href ="' + baseURL + param + '.geojson" target = "_blank">Ver como um mapa em geojson.io</a>');
     }
   }
 });

@@ -20,31 +20,31 @@ export default Ember.Controller.extend(PaginatedOrderedController, {
       return {
         value: this.get('country'),
         display: iso31662.country(this.get('country')).name,
-        type: 'country'
+        type: 'país'
       };
     } else if (this.get('state')) {
       return {
         value: this.get('state'),
         display: iso31662.subdivision(this.get('state')).name,
-        type: 'state'
+        type: 'distrito/região'
       };
     } else if (this.get('metro')) {
       return {
         value: this.get('metro'),
         display: this.get('metro'),
-        type: 'metro'
+        type: 'concelho'
       };
     } else if (this.get('name')) {
       return {
         value: this.get('name'),
         display: this.get('name'),
-        type: 'name'
+        type: 'nome'
       };
     } else if (this.get('short_name')) {
       return {
         value: this.get('short_name'),
         display: this.get('short_name'),
-        type: 'short_name'
+        type: 'sigla/acrónimo'
       };
     } else {
       return null;

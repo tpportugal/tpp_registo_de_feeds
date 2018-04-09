@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
         controller.transitionToRoute('feeds.new.success');
       }).catch(function(error) {
         // TODO: display a better error message
-        alert('Erro com a submissão');
+        alert('Ocorreu um erro com a submissão');
       });
     },
     agree: function() {

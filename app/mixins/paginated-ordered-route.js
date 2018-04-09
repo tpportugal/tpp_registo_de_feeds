@@ -6,10 +6,10 @@ export default Ember.Mixin.create({
       refreshModel: true
     },
     sort_order: {
-    	refreshModel: true
+      refreshModel: true
     },
     sort_key: {
-    	refreshModel: true
+      refreshModel: true
     }
   }
 });

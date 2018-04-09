@@ -32,14 +32,14 @@ export default Ember.Route.extend({
           progress = Math.floor(response.progress * 100) + "%";
         }
 
-        if (response.status === "queued"){
-          status =  "Queued...";
-        } else if (response.status === "downloading"){
-          status = "Downloading (step 1 of 3)...";
-        } else if (response.status === "parsing") {
-          status = "Parsing (step 2 of 3)...";
+        if (response.status === "agendado"){
+          status =  "Agendado...";
+        } else if (response.status === "buscando"){
+          status = "Buscando (passo 1 de 3)...";
+        } else if (response.status === "analisando") {
+          status = "Analisando (passo 2 de 3)...";
         } else {
-          status = "Processing (step 3 of 3)...";
+          status = "Processando (passo 3 de 3)...";
         }
 
         feedsIndexController.send("updateProgress", status, progress);
