@@ -124,12 +124,12 @@
         <!-- If a feed has been imported at import_level >= 2 then also link to a ScheduleStopPair query. -->
         {{#if operatorFirstFeed.isAtLeastImportLevelTwo}}
         <tr>
-          <td>Horários <a href="https://tpp.pt/documentação/banco-de-dados/horários.html" target="_blank"><i class="question-circle ssp-tooltip"></i></a></td>
+          <td>Horários <a href="/documentação/banco-de-dados/horários.html" target="_blank"><i class="question-circle ssp-tooltip"></i></a></td>
           <td>{{ssp-endpoint operatorFirstFeed.onestop_id}}</td>
         </tr>
         {{/if}} {{#if operatorFirstFeed.isAtLeastImportLevelFour}}
         <tr>
-          <td>Criar rotas com TPP Routing<a href="https://tpp.pt/documentação/tpp-routing/" target="_blank"><i class="question-circle tbt-tooltip"></i></a></td>
+          <td>Criar rotas com TPP Routing<a href="/documentação/tpp-routing/" target="_blank"><i class="question-circle tbt-tooltip"></i></a></td>
           <td>
             <a href="{{linkToTurnByTurnDemo}}">Tente criar uma rota na aplicação de demonstração</a>
           </td>
