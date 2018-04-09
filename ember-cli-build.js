@@ -7,9 +7,9 @@ module.exports = function(defaults) {
 
   // TODO: put static assets on CloudFront
   if (EmberApp.env() === 'staging') {
-    prependUrl = '/feed-registry/';
+    prependUrl = '/registo-de-feeds/';
   } else if (EmberApp.env() === 'production') {
-    prependUrl = '/feed-registry/';
+    prependUrl = '/registo-de-feeds/';
   }
 
   var app = new EmberApp(defaults, {
