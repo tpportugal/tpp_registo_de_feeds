@@ -1,10 +1,23 @@
 import Ember from 'ember';
 import config from './config/environment';
-import googlePageview from './mixins/google-pageview';
 
+const Router = Ember.Router.extend({
+  location: config.locationType,
+  metrics: Ember.inject.service(),
 
-const Router = Ember.Router.extend(googlePageview, {
-  location: config.locationType
+  didTransition() {
+    this._super();
+    this._trackPage();
+  },
+
+  _trackPage() {
+    Ember.run.scheduleOnce('afterRender', this, () => {
+      const page = config.baseURL + this.get('url');
+      const title = this.getWithDefault('currentRouteName', 'unknown');
+
+      Ember.get(this, 'metrics').trackPage('Piwik', { page, title });
+    });
+  }
 });
 
 Router.map(function() {
