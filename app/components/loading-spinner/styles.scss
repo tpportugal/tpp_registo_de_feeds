@@ -48,9 +48,9 @@
     -moz-animation: spinning 1s infinite linear;
   }
   &::after {
-    content: 'Aguarde';
+    content: attr(progress-status);
     position: fixed;
     top: calc(55% + 40px);
-    left: calc(50% - 28px);
+    left: calc(50% - 13px);
   }
 }
