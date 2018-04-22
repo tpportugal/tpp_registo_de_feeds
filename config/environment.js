@@ -13,6 +13,16 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    metricsAdapters: [
+      {
+        name: 'Piwik',
+        environments: ['production'],
+        config: {
+          piwikUrl: 'https://tpp.pt/stats',
+          siteId: 1
+        }
+      }
+    ],
     moment: {
       includeLocales: ['pt']
     },
