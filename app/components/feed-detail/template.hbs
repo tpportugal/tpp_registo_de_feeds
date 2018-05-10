@@ -1,4 +1,4 @@
-<h4 class="detail">Detalhes da Feed</h4>
+<h4 class="detail">Detalhes do feed</h4>
 <table class="operator-table">
   <tr>
     <td>ID Onestop <a href="https://tpp.pt/documentação/esquema-onestop-id/" target="_blank"><i class="question-circle onestop-id-tooltip"></i></a></td>
@@ -47,7 +47,7 @@
   {{/if}}
 
   <tr>
-    <td>Derivativos permitidos</td>
+    <td>Produtos derivados permitidos</td>
     <td>{{feed.license_create_derived_product}}</td>
   </tr>
   <tr>
@@ -65,7 +65,7 @@
 
   {{#if feedImportLevelZero}}
     <tr>
-      <td>Área geográfica da feed</td>
+      <td>Área geográfica do feed</td>
       <td>
         <ul>
           {{#if feedImportLevelOne}}
@@ -77,7 +77,7 @@
     </tr>
   {{/if}}
   <tr>
-    <td>Mais informações da feed em TPP</td>
+    <td>Mais informações do feed em TPP</td>
     <td>
       <ul>
         <li><a href="/expedidor/feeds/{{feed.onestop_id}}">Ver estatísticas e relatórios de validação no Expedidor TPP</a></li>
@@ -86,7 +86,7 @@
     </td>
   </tr>
   <tr>
-    <td>Versões da Feed</td>
+    <td>Versões do feed</td>
     <td>
       {{#if showArchivedFeedVersions}}
         {{#each feed.feed_versions as |fv|}}
@@ -104,9 +104,9 @@
             <hr>
           </ul>
         {{/each}}
-        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Ocultar versões da feed</button>
+        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Ocultar versões do feed</button>
       {{else}}
-        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Mostrar versões da feed</button>
+        <button class="btn btn-default" {{action 'toggleArchivedFeedVersion'}}>Mostrar versões do feed</button>
       {{/if}}
     </td>
   </tr>

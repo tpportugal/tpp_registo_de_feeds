@@ -4,7 +4,7 @@
       <h2>REGISTO DE FEEDS</h2>
     </div>
 
-    <p>O Registo de Feeds lista todos os operadores de transportes públicos incluídos no Banco de Dados TPP. Veja o que a licença de cada feed lhe permite fazer e clique para obter mais detalhes sobre as feeds associadas com cada operador.</p>
+    <p>O Registo de Feeds lista todos os operadores de transportes públicos incluídos no Banco de Dados TPP. Veja o que a licença de cada feed lhe permite fazer e clique para obter mais detalhes sobre os feeds associados com cada operador.</p>
 
     {{#if import_level}}
       {{import-level-filter importLevel=import_level totalOperators=model.meta.total}}
@@ -36,15 +36,15 @@
     </div>
 
     <p>
-      Gostaríamos de ter a sua ajuda para expandir a cobertura TPP por todo o país. Se tiver conhecimento de uma feed GTFS, {{#link-to "feeds.new"}}adicione-a aqui{{/link-to}}. Para corrigir algum erro numa das entradas existentes, clique no nome do operador para ver e editar os seus detalhes.
+      Gostaríamos de ter a sua ajuda para expandir a cobertura TPP por todo o país. Se tiver conhecimento de um feed GTFS, {{#link-to "feeds.new"}}adicione-o aqui{{/link-to}}. Para corrigir algum erro numa das entradas existentes, clique no nome do operador para ver e editar os seus detalhes.
     </p>
 
     <p>
-    Está à procura de JSON? A <a href="/how-it-works/#slide-3">API do Banco de Dados TPP</a> pode providenciar todos estes {{json-endpoint "operators" "" "operadores"}} ou todas estas {{json-endpoint "feeds" "" "feeds"}}.
+    Está à procura de JSON? A <a href="/how-it-works/#slide-3">API do Banco de Dados TPP</a> pode fornecer todos estes {{json-endpoint "operators" "" "operadores"}} ou todas estas {{json-endpoint "feeds" "" "feeds"}}.
     </p>
 
     <p class="legal-action">
-    Esta lista é providenciada apenas a título informativo e não constitui aconselhamento legal. Não lhe podemos garantir a precisão ou fiabilidade do Registo de Feeds de forma alguma. Aconselhamos a que consulte o seu próprio advogado antes de utilizar e confiar nas informações fornecidas no Registo de Feeds.
+    Esta lista é fornecida apenas a título informativo e não constitui aconselhamento legal. Não lhe podemos garantir a precisão ou fiabilidade do Registo de Feeds de forma alguma. Aconselhamos a que consulte o seu próprio advogado antes de utilizar e confiar nas informações fornecidas no Registo de Feeds.
     </p>
 
   </div>
