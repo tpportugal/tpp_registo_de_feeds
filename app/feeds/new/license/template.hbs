@@ -1,11 +1,11 @@
 <div class="fullvw-wrapper">
-  {{add-feed-tabs header-text="ADICIONAR UMA FEED GTFS" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UM FEED GTFS" submitted=false upload-tab-class="tab" add-operator-tab-class="tab" license-tab-class="tab current" submit-tab-class="tab" submitted=false}}
 </div>
 
 <div class="container">
   <div class="add-operator-info">
     <p>
-      Muitas feeds têm licenças ou termos legais que se lhes aplicam. Providencie o máximo de informação que conseguir acerca da licença para esta feed. Não há problema se não conseguir responder a todas as perguntas sobre a licença.
+      Muitos feeds têm licenças ou termos legais que se lhes aplicam. Forneça o máximo de informação que conseguir acerca da licença para este feed. Não há problema se não conseguir responder a todas as perguntas sobre a licença.
     </p>
     <p>
       {{documentation-link "/registo-de-feeds/adicionar-uma-feed.html#license" "Aprenda mais sobre licenças"}}
@@ -17,7 +17,7 @@
   <div class="input-form-wrapper">
     <div class="row inline-items {{if license_present_mode "sim"}}{{unless license_present_mode "não"}}">
       <div class="col-sm-4 inline-label">
-        <div class="input-form-label">Esta feed tem uma licença?</div>
+        <div class="input-form-label">Este feed tem uma licença?</div>
       </div>
       <div class="col-sm-8">
         <div class="btn-group" {{action "click"}}>

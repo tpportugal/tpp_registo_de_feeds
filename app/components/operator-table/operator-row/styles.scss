@@ -50,7 +50,7 @@
         }
         &:after {
           content: 'When using, be sure to credit the transit agency. Check license for exact requirements.';
-          content: 'Ao utilizar, certifique-se de creditar o operador/agência. Verifique a licença para saber exatamente como o fazer.';
+          content: 'Ao utilizar, certifique-se que credita o operador/agência. Verifique a licença para saber exatamente como o fazer.';
           @extend .tooltip;
         }
       }
@@ -86,7 +86,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Pode criar um produto derivado dos dados desta feed.';
+          content: 'Pode criar um produto derivado dos dados deste feed.';
           @extend .tooltip;
         }
       }
@@ -98,7 +98,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'NÃO pode criar um produto derivado dos dados desta feed.';
+          content: 'NÃO pode criar um produto derivado dos dados deste feed.';
           @extend .tooltip;
         }
       }
@@ -110,7 +110,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Desconhecemos se o operador/agência lhe permite criar um produto derivado dos dados desta feed.';
+          content: 'Desconhecemos se o operador/agência lhe permite criar um produto derivado dos dados deste feed.';
           @extend .tooltip;
         }
       }
@@ -123,7 +123,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Pode redistribuir esta feed.';
+          content: 'Pode redistribuir este feed.';
           @extend .tooltip;
         }
       }
@@ -135,7 +135,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'NÃO pode redistribuir esta feed. Verifique a licença por excepções.';
+          content: 'NÃO pode redistribuir este feed. Leia a licença para verificar excepções.';
           @extend .tooltip;
         }
       }
@@ -147,7 +147,7 @@
           @extend .tooltip-point;
         }
         &:after {
-          content: 'Desconhecemos se o operador/agência lhe permite redistribuir esta feed.';
+          content: 'Desconhecemos se o operador/agência lhe permite redistribuir este feed.';
           @extend .tooltip;
         }
       }
