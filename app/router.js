@@ -1,8 +1,8 @@
 import Ember from 'ember';
-import config from './config/environment';
+import ENV from 'feed-registry/config/environment';
 
 const Router = Ember.Router.extend({
-  location: config.locationType,
+  location: ENV.locationType,
   metrics: Ember.inject.service(),
 
   didTransition() {
@@ -12,7 +12,7 @@ const Router = Ember.Router.extend({
 
   _trackPage() {
     Ember.run.scheduleOnce('afterRender', this, () => {
-      const page = config.baseURL + this.get('url');
+      const page = ENV.baseURL + this.get('url');
       const title = this.getWithDefault('currentRouteName', 'unknown');
 
       Ember.get(this, 'metrics').trackPage('Piwik', { page, title });

@@ -91,11 +91,11 @@
         @extend .tooltip;
       }
       &.tbt-tooltip:after {
-        content: "O TPP Turn-by-Turn utiliza o Banco de Dados TPP e o motor de rotas Valhalla para pesquisar rotas multimodais de transportes públicos.";
+        content: "O Roteador TPP utiliza o Banco de Dados TPP e o motor de rotas Valhalla para pesquisar rotas multimodais de transportes públicos.";
         @extend .tooltip;
       }
       &.attribution-text-tooltip:after {
-        content: "A licença desta feed requer que inclua este texto onde quer que utilize os seus dados.";
+        content: "A licença deste feed requer que inclua este texto onde quer que utilize os seus dados.";
         @extend .tooltip;
       }
     }

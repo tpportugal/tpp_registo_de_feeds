@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export function mobilityExplorerLink(params, hash) {
-  let link = 'https://tpp.pt/explorador/#/';
+  let link = '/explorador/#/';
   if (hash.query === 'operator') {
     link = link + 'operators?bbox=' + hash.operator.get('geometryToBboxString') + '&onestop_id=' + hash.operator.get('onestop_id');
   } else if (hash.query === 'routesByOperator') {

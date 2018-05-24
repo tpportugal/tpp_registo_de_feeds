@@ -5,11 +5,11 @@ import ENV from 'feed-registry/config/environment';
 
 export default DS.RESTAdapter.extend({
   host: ENV.datastoreHost,
-  namespace: 'api/v1',
+  namespace: 'v1',
   coalesceFindRequests: true,
   pathForType: function (type) {
     // model names should be underscored in URLs
-    // For example: /api/v1/feed_version_imports
+    // For example: /v1/feed_version_imports
     let decamelized = Ember.String.decamelize(type);
     let underscored = Ember.String.underscore(decamelized);
     return Ember.String.pluralize(underscored);

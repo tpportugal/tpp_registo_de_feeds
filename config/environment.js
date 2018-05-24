@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    datastoreHost: 'https://tpp.pt',
+    datastoreHost: 'https://api.tpp.pt',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -18,7 +18,7 @@ module.exports = function(environment) {
         name: 'Piwik',
         environments: ['production'],
         config: {
-          piwikUrl: 'https://tpp.pt/stats',
+          piwikUrl: 'https://analytics.tpp.pt',
           siteId: 1
         }
       }
@@ -43,7 +43,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.datastoreHost = 'https://tppgeo.cf';
+    ENV.datastoreHost = 'https://api.tppgeo.cf';
     ENV.apiProxyKey= 'tpp-_ngAKUs';
   }
 
@@ -69,16 +69,16 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'staging') {
-    ENV.datastoreHost = 'https://tppgeo.cf';
-    ENV.baseURL = '/registo-de-feeds';
-    ENV.apiProxyKey= 'tpp-YFO6jk8';
-  }
-
   if (environment === 'production') {
-    ENV.datastoreHost = 'https://tpp.pt';
-    ENV.baseURL = '/registo-de-feeds';
-    ENV.apiProxyKey= 'tpp-_ngAKUs';
+    if (process.env['BUILD'] === 'staging') {
+      ENV.datastoreHost = 'https://api.tppgeo.cf';
+      ENV.baseURL = '/registo-de-feeds';
+      ENV.apiProxyKey= 'tpp-YFO6jk8';
+    } else {
+      ENV.datastoreHost = 'https://api.tpp.pt';
+      ENV.baseURL = '/registo-de-feeds';
+      ENV.apiProxyKey= 'tpp-_ngAKUs';
+    }
   }
 
   return ENV;

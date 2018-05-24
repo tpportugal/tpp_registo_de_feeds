@@ -4,7 +4,7 @@ import ENV from 'feed-registry/config/environment';
 
 export default Ember.Handlebars.registerBoundHelper('geojson-endpoint', function (param, attr) {
   var entity = '';
-  var baseURL = ENV.datastoreHost + '/api/v1/';
+  var baseURL = ENV.datastoreHost + '/v1/';
 
   if (param.charAt(0) === 'o') {
     entity = 'operators/';

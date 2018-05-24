@@ -4,7 +4,7 @@ import ENV from 'feed-registry/config/environment';
 
 export default Ember.Handlebars.registerBoundHelper('ssp-endpoint',function(param, text) {
   var entity = '';
-  var baseURL = ENV.datastoreHost+'/api/v1/schedule_stop_pairs?';
+  var baseURL = ENV.datastoreHost+'/v1/schedule_stop_pairs?';
 
   if (param.charAt(0) === 'o'){
     entity = 'operator_onestop_id=';

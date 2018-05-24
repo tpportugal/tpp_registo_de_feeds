@@ -3,18 +3,18 @@
 {{/if}}
 
 <div class="fullvw-wrapper">
-  {{add-feed-tabs header-text="ADICIONAR UMA FEED GFTS" upload-tab-class="tab current" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
+  {{add-feed-tabs header-text="ADICIONAR UM FEED GFTS" upload-tab-class="tab current" add-operator-tab-class="tab" license-tab-class="tab" submit-tab-class="tab" submitted=false}}
 </div>
 <div class="container">
   <div class="add-operator-info">
     <p>
-      O TPP junta várias fontes de dados de transportes públicos para construir uma <a href="https://tpp.pt/registo-de-feeds" target="_blank">directoria de operadores e feeds</a> que pode ser editada por entusiastas dos transportes públicos e programadores. As suas contribuições podem ajudar a expandir a cobertura do TPP por todo o país.
+      O TPP junta várias fontes de dados de transportes públicos para construir uma <a href="/registo-de-feeds" target="_blank">directoria de operadores e feeds</a> que pode ser editada por entusiastas dos transportes públicos e programadores. As suas contribuições podem ajudar a expandir a cobertura do TPP por todo o país.
     </p>
     <p>
       Se tem conhecimento de um feed GTFS, por favor continue abaixo!
     </p>
     <p>
-      {{documentation-link "/registo-de-feeds/adicionar-uma-feed.html#feedurl" "Saiba mais sobre feeds GTFS"}}
+      {{documentation-link "registo-de-feeds/adicionar-um-feed.html#descubra-a-ligacao-para-o-feed" "Saiba mais sobre feeds GTFS"}}
     </p>
   </div>
   <form {{action "next" on="submit"}}>
@@ -33,7 +33,7 @@
             {{#if isLoading}}
               {{progressStatus}}
             {{else}}
-              Introduza o URL da feed GTFS
+              Introduza o URL do feed GTFS
             {{/if}}
           </div>
           <div class="input-form-field">{{input type="text" value=model.url placeholder="http://... .zip" autofocus=true}}</div>
