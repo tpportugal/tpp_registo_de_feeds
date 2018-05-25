@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="assets/images/favicon.png">
-    <title>Registo de Feeds &sdot; TPP</title>
+    <title>TPP - Registo de Feeds</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,43 +16,40 @@
     {{content-for 'head-footer'}}
   </head>
   <body>
-    <nav class="navbar col-lg-12 col-md-12 col-sm-12">
-      <a href="/"><div class="logo-image"></div></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-bar" aria-expanded="false" aria-controls="navbar">
           MENU
         </button>
       </div>
-
-      <div id="nav-menu-helper"></div>
-      <div id="nav-menu-bar" class="navbar-collapse collapse">
-        <div class="nav-menu">
-          <div class="float-left">
-            <a href="/" target="_self">
-            <div class="circle"></div><div class="main">índice</div>
-            </a>
-          </div>
-          <div class="float-left">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/" target="_self">
+        TPP - Registo de Feeds
+        </a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li>
             <a class="active" href="/registo-de-feeds" target="_self">
-            <div class="circle"></div><div class="main">registo de feeds</div>
+            Expedidor
             </a>
-          </div>
-          <div class="float-left">
+          </li>
+          <li>
             <a href="/explorador" target="_self">
-            <div class="circle"></div><div class="main">explorador</div>
+            Explorador
             </a>
-          </div>
-          <div class="float-left">
+          </li>
+          <li>
             <a href="/documentação" target="_self">
-            <div class="circle"></div><div class="main">documentação</div>
+            Documentação
             </a>
-          </div>
-          <div class="float-left">
+          </li>
+          <li>
             <a href="/novidades" target="_self">
-              <div class="circle"></div><div class="main">novidades</div>
+            Aplicação
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </nav>
 
