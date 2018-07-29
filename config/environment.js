@@ -31,13 +31,13 @@ module.exports = function(environment) {
       // when it is created
     },
     contentSecurityPolicy: {
-      'default-src': "'self' https://tpp.pt",
-      'connect-src': "'self' https://tpp.pt",
+      'default-src': "'self' https://www.tpp.pt",
+      'connect-src': "'self' https://www.tpp.pt",
       'img-src': "'self' data:",
       'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
       'media-src': "'self'",
       'script-src': "'self'",
-      'font-src': "'self' https://fonts.gstatic.com https://tpp.pt"
+      'font-src': "'self' https://fonts.gstatic.com https://www.tpp.pt"
     },
 
   };
